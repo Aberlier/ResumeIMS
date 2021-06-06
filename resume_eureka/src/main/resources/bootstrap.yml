@@ -1,0 +1,45 @@
+spring:
+  application:
+    name: resume_eureka
+  datasource:
+    name: druidDataSource
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/db_resumeims?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC&zeroDateTimeBehavior=convertToNull&autoReconnect=true
+      username: root
+      password: root
+      filters: stst,wall,log4j,config
+      max-active: 100
+      initial-size: 1
+      max-wait: 60001
+      min-idle: 1
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      validation-query: select 'x'
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: true
+      max-open-prepared-statements: 50
+      max-pool-perpared-statement-per-connection-size: 20
+
+server:
+  port: 8761
+  error:
+    path: /error
+  servlet:
+    session:
+      timeout: 30m
+      context-path: /resume_eureka
+  tomcat:
+    uri-encoding: UTF-8
+    max-threads: 500
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/
