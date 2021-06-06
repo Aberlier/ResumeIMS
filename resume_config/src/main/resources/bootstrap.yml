@@ -1,0 +1,36 @@
+# @xxx@ 从pom.xml中取值, 所以 @xx@ 标注的值，都不能从nacos中获取
+server:
+  port: 9981
+  error:
+    path: /error
+  servlet:
+    session:
+      timeout: 30m
+      context-path: /resume_config
+  tomcat:
+    uri-encoding: UTF-8
+    max-threads: 500
+spring:
+  application:
+    name: resume_config
+  datasource:
+    name: druidDataSource
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/db_resumeims?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC&zeroDateTimeBehavior=convertToNull&autoReconnect=true
+      username: root
+      password: root
+      filters: stst,wall,log4j,config
+      max-active: 100
+      initial-size: 1
+      max-wait: 60001
+      min-idle: 1
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      validation-query: select 'x'
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: true
+      max-open-prepared-statements: 50
+      max-pool-perpared-statement-per-connection-size: 20
