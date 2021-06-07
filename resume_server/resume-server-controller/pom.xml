@@ -31,14 +31,16 @@
         </dependency>
         <dependency>
             <groupId>com.resumeims.server</groupId>
-            <artifactId>resume-server-entity</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.resumeims.server</groupId>
             <artifactId>resume-server-service</artifactId>
             <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
         </dependency>
+
+        <!--        <dependency>-->
+<!--            <groupId>com.resumeims.server</groupId>-->
+<!--            <artifactId>resume-server-service</artifactId>-->
+<!--            <version>0.0.1-SNAPSHOT</version>-->
+<!--        </dependency>-->
     </dependencies>
 
     <build>

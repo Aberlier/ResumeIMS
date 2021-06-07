@@ -46,6 +46,7 @@ import java.util.Map;
 @Slf4j
 @Service
 public class EmergencyMaterialInputServiceImpl extends SuperServiceImpl<EmergencyMaterialInputMapper, EmergencyMaterialInput> implements EmergencyMaterialInputService {
+
     @Override
     public List<Map<String, Object>> populationIndexInfo() {
         return this.baseMapper.populationIndexInfo();

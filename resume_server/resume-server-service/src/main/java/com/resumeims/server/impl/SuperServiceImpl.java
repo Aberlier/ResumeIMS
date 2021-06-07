@@ -1,12 +1,13 @@
 package com.resumeims.server.impl;
 
 import cn.hutool.core.util.StrUtil;
-import com.baomidou.mybatisplus.extension.api.R;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.baomidou.mybatisplus.extension.toolkit.SqlHelper;
+import com.resumeims.resume_config.baseservices.SuperService;
+import com.resumeims.resume_config.context.BaseContextHandler;
 import com.resumeims.resume_config.exceptionconfig.BizException;
+import com.resumeims.resume_config.utils.R;
 import com.resumeims.resume_config.utils.StrPool;
-import com.resumeims.server.base.SuperService;
 import com.resumeims.resume_config.basemapper.SuperMapper;
 
 import java.lang.reflect.ParameterizedType;

@@ -63,6 +63,12 @@
             <groupId>cn.afterturn</groupId>
             <artifactId>easypoi-base</artifactId>
             <version>4.2.0</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>guava</artifactId>
+                    <groupId>com.google.guava</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>cn.afterturn</groupId>
@@ -179,11 +185,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
-<!--        &lt;!&ndash;日志处理&ndash;&gt;-->
+
 <!--        <dependency>-->
-<!--            <groupId>com.sca4cloud</groupId>-->
-<!--            <artifactId>sca-common-log</artifactId>-->
-<!--            <version>${log.version}</version>-->
+<!--            <groupId>com.google.guava</groupId>-->
+<!--            <artifactId>guava</artifactId>-->
+<!--            <version>16.0.1</version>-->
 <!--        </dependency>-->
     </dependencies>
 

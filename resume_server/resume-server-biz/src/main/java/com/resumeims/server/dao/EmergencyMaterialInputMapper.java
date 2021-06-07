@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.resumeims.resume_config.basemapper.SuperMapper;
 import com.resumeims.server.entity.EmergencyMaterialInput;
 import com.resumeims.server.entity.EmergencyMaterialInputEntity;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
@@ -20,6 +21,7 @@ import java.util.Map;
  * @date 2020-11-10
  */
 @Repository
+@Mapper
 public interface EmergencyMaterialInputMapper extends SuperMapper<EmergencyMaterialInput> {
     List<Map<String, Object>> populationIndexInfo();
 

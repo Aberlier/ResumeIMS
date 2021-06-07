@@ -1,6 +1,6 @@
 package com.resumeims.server.dto;
 
-import com.github.zuihou.base.entity.SuperEntity;
+import com.resumeims.resume_config.baseentity.SuperEntity;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.*;
