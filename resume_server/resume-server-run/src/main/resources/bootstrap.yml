@@ -1,0 +1,68 @@
+server:
+  port: 9982
+  error:
+    path: /error
+  servlet:
+    session:
+      timeout: 30m
+      context-path: /resume-server
+  tomcat:
+    uri-encoding: UTF-8
+    max-threads: 500
+spring:
+  devtools:
+    devtools:
+      restart:
+        enabled: true  #设置开启热部署
+        additional-paths: src/main/java #重启目录
+        exclude: WEB-INF/**
+      freemarker:
+        cache: false    #页面不加载缓存，修改即时生效
+  application:
+    name: resume-server
+  datasource:
+    name: druidDataSource
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/db_resumeims?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC&zeroDateTimeBehavior=convertToNull&autoReconnect=true
+      username: root
+      password: root
+      filters: stst,wall,log4j,config
+      max-active: 100
+      initial-size: 1
+      max-wait: 60001
+      min-idle: 1
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      validation-query: select 'x'
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: true
+      max-open-prepared-statements: 50
+      max-pool-perpared-statement-per-connection-size: 20
+  #  cloud:
+  #    consul:
+  #      host: localhost
+  #      port: 8500
+  #      discovery:
+  #        serviceName: ${spring.application.name} #注册到consul的服务名称
+  #定义监控资源
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+#获取mapper.xml
+mybatis:
+  mapper-locations: classpath:**/*.xml
+
+#开发健康检查接口
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS

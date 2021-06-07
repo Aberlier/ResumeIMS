@@ -6,12 +6,11 @@
     <file url="file://$PROJECT_DIR$/resume_eureka/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resume_eureka/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resume_server" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/resume_server/resume-server-api/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resume_server/resume-server-biz/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resume_server/resume-server-controller/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resume_server/resume-server-entity/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resume_server/resume-server-run/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resume_server/resume-server-run/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resume_server/resume-server-service/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/resume_server/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/resume_server/src/main/resources" charset="UTF-8" />
   </component>
 </project>

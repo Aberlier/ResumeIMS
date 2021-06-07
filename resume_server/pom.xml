@@ -8,11 +8,11 @@
     <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
     <modules>
-        <module>resume-server-api</module>
         <module>resume-server-entity</module>
         <module>resume-server-biz</module>
         <module>resume-server-service</module>
         <module>resume-server-controller</module>
+        <module>resume-server-run</module>
     </modules>
     <name>resume_server</name>
     <description>Demo project for Spring Boot</description>
@@ -20,14 +20,17 @@
         <groupId>resume-ims</groupId>
         <artifactId>resume-ims</artifactId>
         <version>1.0-SNAPSHOT</version>
-<!--        <relativePath>../hello-spring-cloud-dependencies/pom.xml</relativePath>-->
+        <relativePath>../</relativePath>
+        <!--        <relativePath>../hello-spring-cloud-dependencies/pom.xml</relativePath>-->
     </parent>
     <dependencies>
+
         <dependency>
             <groupId>com.resumeims</groupId>
             <artifactId>resume_config</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>

@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="88f9a2c9-cd6a-46ce-8b32-2ba446bff068" name="Default Changelist" comment="完善项目整体模块设置">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/annotation/LoginUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/basecontroller/BaseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/basecontroller/DeleteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/basecontroller/PageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/basecontroller/PoiController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/basecontroller/QueryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/basecontroller/SaveController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/basecontroller/SuperController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/basecontroller/SuperSimpleController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/basecontroller/UpdateController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/baseentity/Entity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/baseentity/SuperEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/baseentity/TreeEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/basemapper/SuperMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/baseservices/SuperService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/context/BaseContextConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/context/BaseContextHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/exceptionconfig/BaseException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/exceptionconfig/BaseExceptionCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/exceptionconfig/BaseUncheckedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/exceptionconfig/BizException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/exceptionconfig/ExceptionCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/log/SysLog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/model/RemoteData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/model/SysOrg.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/model/SysRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/model/SysStation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/model/SysUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/query/LbqWrapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/query/QueryWrap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/request/PageParams.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/update/LbuWrapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/update/Wraps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/utils/AntiSqlFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/utils/BaseEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/utils/DateUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/utils/DefValueHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/utils/EnumDeserializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/utils/EnumSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/utils/JsonUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/utils/MapHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/utils/MyJacksonModule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/utils/MyLocalDateTimeDeserializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/utils/R.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/utils/StrHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/utils/StrPool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/validation/IValidatable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/annotation/LoginUser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/basecontroller/BaseController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/basecontroller/DeleteController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/basecontroller/PageController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/basecontroller/PoiController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/basecontroller/QueryController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/basecontroller/SaveController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/basecontroller/SuperController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/basecontroller/SuperSimpleController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/basecontroller/UpdateController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/baseentity/Entity.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/baseentity/SuperEntity$Save.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/baseentity/SuperEntity$Update.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/baseentity/SuperEntity.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/baseentity/TreeEntity.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/basemapper/SuperMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/baseservices/SuperService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/context/BaseContextConstants.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/context/BaseContextHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/exceptionconfig/BaseException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/exceptionconfig/BaseExceptionCode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/exceptionconfig/BaseUncheckedException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/exceptionconfig/BizException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/exceptionconfig/ExceptionCode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/log/SysLog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/model/RemoteData.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/model/SysOrg.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/model/SysRole.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/model/SysStation.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/model/SysUser$SysUserBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/model/SysUser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/query/LbqWrapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/query/QueryWrap.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/request/PageParams.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/update/LbuWrapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/update/Wraps.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/utils/AntiSqlFilter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/utils/BaseEnum.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/utils/DateUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/utils/DefValueHelper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/utils/EnumDeserializer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/utils/EnumSerializer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/utils/JsonUtil$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/utils/JsonUtil$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/utils/JsonUtil$JacksonHolder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/utils/JsonUtil$JacksonObjectMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/utils/JsonUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/utils/MapHelper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/utils/MyJacksonModule.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/utils/MyLocalDateTimeDeserializer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/utils/R.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/utils/StrHelper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/utils/StrPool.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/validation/IValidatable.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_server/HELP.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_server/resume-server-biz/src/main/java/com/resumeims/server/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_server/resume-server-biz/src/main/java/com/resumeims/server/dao/EmergencyMaterialInputMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_server/resume-server-biz/src/main/java/com/resumeims/server/utils/ExcelExportUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_server/resume-server-biz/src/main/java/com/resumeims/server/utils/Query.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_server/resume-server-biz/src/main/resources/doc/hour001.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_server/resume-server-biz/src/main/resources/doc/material.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_server/resume-server-biz/src/main/resources/mapper/EmergencyMaterialInputMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_server/resume-server-biz/src/test/java/com/resumeims/server/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_server/resume-server-biz/target/classes/doc/hour001.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_server/resume-server-biz/target/classes/doc/material.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_server/resume-server-biz/target/classes/mapper/EmergencyMaterialInputMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_server/resume-server-controller/src/main/java/com/resumeims/server/controller/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_server/resume-server-controller/src/main/java/com/resumeims/server/controller/EmergencyMaterialInputController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_server/resume-server-controller/src/test/java/com/resumeims/server/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_server/resume-server-entity/src/main/java/com/resumeims/server/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_server/resume-server-entity/src/main/java/com/resumeims/server/dto/EmergencyMaterialInputPageDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_server/resume-server-entity/src/main/java/com/resumeims/server/dto/EmergencyMaterialInputSaveDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_server/resume-server-entity/src/main/java/com/resumeims/server/dto/EmergencyMaterialInputUpdateDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_server/resume-server-entity/src/main/java/com/resumeims/server/entity/EmergencyMaterialInput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_server/resume-server-entity/src/main/java/com/resumeims/server/entity/EmergencyMaterialInputEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_server/resume-server-entity/src/test/java/com/resumeims/server/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_server/resume-server-run/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_server/resume-server-run/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_server/resume-server-run/src/main/resources/tanbao-eecp-server.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_server/resume-server-run/src/test/java/com/resumeims/server/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_server/resume-server-run/target/classes/bootstrap.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_server/resume-server-run/target/classes/com/resumeims/server/ResumeServerApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_server/resume-server-run/target/classes/tanbao-eecp-server.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_server/resume-server-run/target/test-classes/com/resumeims/server/AppTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_server/resume-server-service/src/main/java/com/resumeims/server/services/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_server/resume-server-service/src/main/java/com/resumeims/server/services/EmergencyMaterialInputService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_server/resume-server-service/src/main/java/com/resumeims/server/services/impl/EmergencyMaterialInputServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_server/resume-server-service/src/main/java/com/resumeims/server/services/impl/SuperServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_server/resume-server-service/src/test/java/com/resumeims/server/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_server/resume_server.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_server/target/classes/bootstrap.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_server/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_server/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_server/target/test-classes/com/resumeims/server/resume_server/ResumeServerApplicationTests.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume_server/target/test-classes/com/resumeims/server/resumeserverapi/ResumeServerApiApplicationTests.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/resumeims/server/resume_server/ResumeServerApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/DataBaseConfig/DruidConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/databaseconfig/DruidConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/DataBaseConfig/DruidConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/DataBaseConfig/DruidConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resume_server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resume_server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resume_server/resume-server-api/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resume_server/resume-server-biz/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resume_server/resume-server-biz/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resume_server/resume-server-controller/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resume_server/resume-server-controller/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resume_server/resume-server-entity/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resume_server/resume-server-entity/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resume_server/resume-server-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resume_server/resume-server-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resume_server/src/main/java/com/resumeims/server/resume_server/ResumeServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/resume_server/resume-server-run/src/main/java/com/resumeims/server/ResumeServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resume_server/src/test/java/com/resumeims/server/resume_server/ResumeServerApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="E:/Maven/apache-maven-3.6.1" />
+        <option name="userSettingsFile" value="E:\Maven\apache-maven-3.6.1\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1tShQ48sGFPOUZM8oddTLFkIfbt" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/resume_server/src/main/java/com/resumeims/server/resume_server" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2920354" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\MyProject\ResumeIMS\service\ResumeIMS\src\main" />
+      <recent name="E:\MyProject\ResumeIMS\service\ResumeIMS\resume_server\resume-server-run\src\main\resources" />
+      <recent name="E:\MyProject\ResumeIMS\service\ResumeIMS\resume_server\src\main\resources" />
+      <recent name="E:\MyProject\ResumeIMS\service\ResumeIMS\resume_server\resume-server-biz\src\main\resources\mapper" />
+      <recent name="E:\MyProject\ResumeIMS\service\ResumeIMS\resume_server\resume-server-biz\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.resumeims.resume_config.baseservices" />
+      <recent name="com.resumeims.server.entity" />
+      <recent name="com.resumeims.server.impl" />
+      <recent name="com.resumeims.server" />
+      <recent name="com.resumeims.server.dao" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\MyProject\ResumeIMS\service\ResumeIMS\resume_server\src\main\java\com\resume\server\resumeservermain" />
+      <recent name="E:\MyProject\ResumeIMS\service\ResumeIMS\resume_server\src\main\resources" />
+      <recent name="E:\MyProject\ResumeIMS\service\ResumeIMS\resume_server\src\main\java" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ResumeServerApplication">
+    <configuration name="ResumeConfigApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="resume_config" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.resumeims.resume_config.ResumeConfigApplication" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndTriggerFile" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ResumeEurekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="resume_eureka" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.resumeims.resumeeureka.ResumeEurekaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ResumeServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="resume-server-run" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.resumeims.server.ResumeServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.ResumeConfigApplication" />
+      <item itemvalue="Spring Boot.ResumeEurekaApplication" />
+      <item itemvalue="Spring Boot.ResumeServerApplication" />
+    </list>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <option name="contentProportion" value="0.23340471" />
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="88f9a2c9-cd6a-46ce-8b32-2ba446bff068" name="Default Changelist" comment="" />
+      <created>1622768378893</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1622768378893</updated>
+      <workItem from="1622768385200" duration="2232000" />
+      <workItem from="1622770634402" duration="1507000" />
+      <workItem from="1622772151049" duration="74000" />
+      <workItem from="1622772272030" duration="4673000" />
+      <workItem from="1622796290710" duration="3388000" />
+      <workItem from="1622848217481" duration="12855000" />
+      <workItem from="1622866588980" duration="52000" />
+      <workItem from="1622866681252" duration="10979000" />
+      <workItem from="1622943566423" duration="10294000" />
+      <workItem from="1622979144118" duration="7007000" />
+      <workItem from="1622986186588" duration="4733000" />
+      <workItem from="1622990945308" duration="522000" />
+      <workItem from="1622991515351" duration="1562000" />
+      <workItem from="1623027588827" duration="340000" />
+    </task>
+    <task id="LOCAL-00001" summary="增加全局配置resume-config模块">
+      <created>1622943683119</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1622943683119</updated>
+    </task>
+    <task id="LOCAL-00002" summary="增加全局配置resume-eureka模块">
+      <created>1622943924109</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1622943924109</updated>
+    </task>
+    <task id="LOCAL-00003" summary="增加服务resume-server模块">
+      <created>1622944225576</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1622944225576</updated>
+    </task>
+    <task id="LOCAL-00004" summary="完善项目整体模块设置">
+      <created>1622944820440</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1622944820440</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="增加全局配置resume-config模块" />
+    <MESSAGE value="增加全局配置resume-eureka模块" />
+    <MESSAGE value="增加服务resume-server模块" />
+    <MESSAGE value="完善项目整体模块设置" />
+    <option name="LAST_COMMIT_MESSAGE" value="完善项目整体模块设置" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="392" y="91" key="#Inspections" timestamp="1622983351386">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state x="392" y="91" key="#Inspections/62.0.1474.864@62.0.1474.864" timestamp="1622983351386" />
+    <state x="392" y="94" key="#Notifications" timestamp="1622945227802">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state x="392" y="94" key="#Notifications/62.0.1474.864@62.0.1474.864" timestamp="1622945227802" />
+    <state x="535" y="171" key="#Project_Structure" timestamp="1622991160544">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state x="535" y="171" key="#Project_Structure/62.0.1474.864@62.0.1474.864" timestamp="1622991160544" />
+    <state x="254" y="91" width="1164" height="682" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1622986150595">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state x="254" y="91" width="1164" height="682" key="#com.intellij.execution.impl.EditConfigurationsDialog/62.0.1474.864@62.0.1474.864" timestamp="1622986150595" />
+    <state x="605" y="142" key="#com.intellij.ide.util.MemberChooser" timestamp="1622982845574">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state x="605" y="142" key="#com.intellij.ide.util.MemberChooser/62.0.1474.864@62.0.1474.864" timestamp="1622982845574" />
+    <state x="562" y="222" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1622984830210">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state x="562" y="222" key="#com.intellij.ide.util.TreeClassChooserDialog/62.0.1474.864@62.0.1474.864" timestamp="1622984830210" />
+    <state x="279" y="361" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1622952679178">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state x="279" y="361" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/62.0.1474.864@62.0.1474.864" timestamp="1622952679178" />
+    <state x="530" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1622984793828">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state x="530" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/62.0.1474.864@62.0.1474.864" timestamp="1622984793828" />
+    <state x="421" y="282" key="#xdebugger.evaluate" timestamp="1622883799657">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state x="421" y="282" key="#xdebugger.evaluate/62.0.1474.864@62.0.1474.864" timestamp="1622883799657" />
+    <state x="263" y="30" key="CommitChangelistDialog2" timestamp="1622945302583">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state x="263" y="30" key="CommitChangelistDialog2/62.0.1474.864@62.0.1474.864" timestamp="1622945302583" />
+    <state width="447" height="466" key="DebuggerActiveHint" timestamp="1622883787248">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state width="447" height="466" key="DebuggerActiveHint/62.0.1474.864@62.0.1474.864" timestamp="1622883787248" />
+    <state x="155" y="93" width="1288" height="678" key="DiffContextDialog" timestamp="1622986056402">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state x="155" y="93" width="1288" height="678" key="DiffContextDialog/62.0.1474.864@62.0.1474.864" timestamp="1622986056402" />
+    <state x="581" y="188" key="FileChooserDialogImpl" timestamp="1622886708263">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state x="581" y="188" key="FileChooserDialogImpl/62.0.1474.864@62.0.1474.864" timestamp="1622886708263" />
+    <state width="1036" height="309" key="GridCell.Tab.0.bottom" timestamp="1622993079764">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state width="1036" height="309" key="GridCell.Tab.0.bottom/62.0.1474.864@62.0.1474.864" timestamp="1622993079764" />
+    <state width="1036" height="309" key="GridCell.Tab.0.center" timestamp="1622993079764">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state width="1036" height="309" key="GridCell.Tab.0.center/62.0.1474.864@62.0.1474.864" timestamp="1622993079764" />
+    <state width="1036" height="309" key="GridCell.Tab.0.left" timestamp="1622993079764">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state width="1036" height="309" key="GridCell.Tab.0.left/62.0.1474.864@62.0.1474.864" timestamp="1622993079764" />
+    <state width="1036" height="309" key="GridCell.Tab.0.right" timestamp="1622993079764">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state width="1036" height="309" key="GridCell.Tab.0.right/62.0.1474.864@62.0.1474.864" timestamp="1622993079764" />
+    <state width="1036" height="309" key="GridCell.Tab.1.bottom" timestamp="1622993079765">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state width="1036" height="309" key="GridCell.Tab.1.bottom/62.0.1474.864@62.0.1474.864" timestamp="1622993079765" />
+    <state width="1036" height="309" key="GridCell.Tab.1.center" timestamp="1622993079765">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state width="1036" height="309" key="GridCell.Tab.1.center/62.0.1474.864@62.0.1474.864" timestamp="1622993079765" />
+    <state width="1036" height="309" key="GridCell.Tab.1.left" timestamp="1622993079764">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state width="1036" height="309" key="GridCell.Tab.1.left/62.0.1474.864@62.0.1474.864" timestamp="1622993079764" />
+    <state width="1036" height="309" key="GridCell.Tab.1.right" timestamp="1622993079765">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state width="1036" height="309" key="GridCell.Tab.1.right/62.0.1474.864@62.0.1474.864" timestamp="1622993079765" />
+    <state width="1036" height="309" key="GridCell.Tab.2.bottom" timestamp="1622993079765">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state width="1036" height="309" key="GridCell.Tab.2.bottom/62.0.1474.864@62.0.1474.864" timestamp="1622993079765" />
+    <state width="1036" height="309" key="GridCell.Tab.2.center" timestamp="1622993079765">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state width="1036" height="309" key="GridCell.Tab.2.center/62.0.1474.864@62.0.1474.864" timestamp="1622993079765" />
+    <state width="1036" height="309" key="GridCell.Tab.2.left" timestamp="1622993079765">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state width="1036" height="309" key="GridCell.Tab.2.left/62.0.1474.864@62.0.1474.864" timestamp="1622993079765" />
+    <state width="1036" height="309" key="GridCell.Tab.2.right" timestamp="1622993079765">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state width="1036" height="309" key="GridCell.Tab.2.right/62.0.1474.864@62.0.1474.864" timestamp="1622993079765" />
+    <state x="330" y="91" key="Maven.ArtifactSearchDialog" timestamp="1622982138077">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state x="330" y="91" key="Maven.ArtifactSearchDialog/62.0.1474.864@62.0.1474.864" timestamp="1622982138077" />
+    <state x="492" y="146" key="RollbackChangesDialog" timestamp="1622985250016">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state x="492" y="146" key="RollbackChangesDialog/62.0.1474.864@62.0.1474.864" timestamp="1622985250016" />
+    <state x="301" y="75" key="SettingsEditor" timestamp="1622951778098">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state x="301" y="75" key="SettingsEditor/62.0.1474.864@62.0.1474.864" timestamp="1622951778098" />
+    <state x="392" y="169" key="Vcs.Push.Dialog.v2" timestamp="1622945311985">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state x="392" y="169" key="Vcs.Push.Dialog.v2/62.0.1474.864@62.0.1474.864" timestamp="1622945311985" />
+    <state width="744" height="439" key="XDebugger.FullValuePopup" timestamp="1622883787232">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state width="744" height="439" key="XDebugger.FullValuePopup/62.0.1474.864@62.0.1474.864" timestamp="1622883787232" />
+    <state x="596" y="210" key="chooseDestDirectoryDialog" timestamp="1622984754115">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state x="596" y="210" key="chooseDestDirectoryDialog/62.0.1474.864@62.0.1474.864" timestamp="1622984754115" />
+    <state x="155" y="93" width="1288" height="678" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1622986056402">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state x="155" y="93" width="1288" height="678" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/62.0.1474.864@62.0.1474.864" timestamp="1622986056402" />
+    <state x="155" y="93" width="1288" height="678" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1622985551572">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state x="155" y="93" width="1288" height="678" key="com.intellij.history.integration.ui.views.FileHistoryDialog/62.0.1474.864@62.0.1474.864" timestamp="1622985551572" />
+    <state x="480" y="257" key="com.intellij.ide.util.TipDialog" timestamp="1622979179634">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state x="480" y="257" key="com.intellij.ide.util.TipDialog/62.0.1474.864@62.0.1474.864" timestamp="1622979179634" />
+    <state x="610" y="151" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1622987831593">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state x="610" y="151" key="com.intellij.testIntegration.createTest.CreateTestDialog/62.0.1474.864@62.0.1474.864" timestamp="1622987831593" />
+    <state x="408" y="132" width="782" height="600" key="find.popup" timestamp="1622888475945">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state x="408" y="132" width="782" height="600" key="find.popup/62.0.1474.864@62.0.1474.864" timestamp="1622888475945" />
+    <state x="263" y="227" key="new project wizard" timestamp="1622985825253">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state x="263" y="227" key="new project wizard/62.0.1474.864@62.0.1474.864" timestamp="1622985825253" />
+  </component>
+</project>
