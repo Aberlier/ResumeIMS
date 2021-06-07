@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.resumeims.server.dao.EmergencyMaterialInputMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.resumeims.server.entity.EmergencyMaterialInput">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="create_user" jdbcType="BIGINT" property="createUser"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="update_user" jdbcType="BIGINT" property="updateUser"/>
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+        <result column="facility_code" jdbcType="VARCHAR" property="facilityCode"/>
+        <result column="material_code" jdbcType="VARCHAR" property="materialCode"/>
+        <result column="material_name" jdbcType="VARCHAR" property="materialName"/>
+        <result column="material_type" jdbcType="VARCHAR" property="materialType"/>
+        <result column="material_count" jdbcType="INTEGER" property="materialCount"/>
+        <result column="material_address" jdbcType="INTEGER" property="materialAddress"/>
+        <result column="material_stand_count" jdbcType="INTEGER" property="materialStandCount"/>
+        <result column="material_unit" jdbcType="VARCHAR" property="materialUnit"/>
+        <result column="storage_time" jdbcType="TIMESTAMP" property="storageTime"/>
+        <result column="validity_date" jdbcType="DATE" property="validityDate"/>
+        <result column="manufacturer" jdbcType="VARCHAR" property="manufacturer"/>
+        <result column="phone_number" jdbcType="VARCHAR" property="phoneNumber"/>
+        <result column="material_usage" jdbcType="LONGVARCHAR" property="materialUsage"/>
+        <result column="manager_code" jdbcType="VARCHAR" property="managerCode"/>
+        <result column="input_manager" jdbcType="VARCHAR" property="inputManager"/>
+        <result column="input_time" jdbcType="TIMESTAMP" property="inputTime"/>
+        <result column="status" jdbcType="VARCHAR" property="status"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id,create_user,create_time,update_user,update_time,
+        facility_code, material_code, material_name, material_type, material_count,material_address,
+        material_stand_count, material_unit, storage_time, validity_date, manufacturer, phone_number, material_usage,
+        manager_code, input_manager, input_time, status
+    </sql>
+
+    <select id="populationIndexInfo" resultType="java.util.HashMap">
+        select SUM(rescue_count) as rescue_count,SUM(rescue_scale) as rescue_scale,SUM(rescue_size) as
+        rescue_size,SUM(shelter_count) as shelter_count,SUM(shelter_scale) as shelter_scale,SUM(shelter_size) as
+        shelter_size,SUM(material_count) as material_count,SUM(team_count) as team_count,SUM(member_count) as
+        member_count,SUM(expert_count) as expert_count
+        from(
+        select count(id) as rescue_count, sum(facility_scale) as rescue_scale,sum(facility_size) as rescue_size,0 as
+        shelter_count,0 as shelter_scale,0 as shelter_size,0 as material_count,0 as team_count,0 as member_count,0 as
+        expert_count
+        from emergency_rescue_site
+        union all
+        select 0 as rescue_count, 0 as rescue_scale,0 as rescue_size,count(id) as shelter_count,sum(facility_scale) as
+        shelter_scale,sum(facility_size) as shelter_size,0 as material_count,0 as team_count,0 as member_count,0 as
+        expert_count from emergency_shelter_site
+        union all
+        SELECT 0 as rescue_count, 0 as rescue_scale,0 as rescue_size,0 as shelter_count,0 as shelter_scale,0 as
+        shelter_size,sum(material_count) as material_count,0 as team_count,0 as member_count,0 as expert_count FROM
+        emergency_material_input
+        union all
+        select 0 as rescue_count, 0 as rescue_scale,0 as rescue_size,0 as shelter_count,0 as shelter_scale,0 as
+        shelter_size,0 as material_count,count(distinct a.id) as team_count,count(b.id) as member_count,0 as
+        expert_count from emergency_team_detail a left join emergency_team_member b on a.team_code=b.team_code
+        union all
+        select 0 as rescue_count, 0 as rescue_scale,0 as rescue_size,0 as shelter_count,0 as shelter_scale,0 as
+        shelter_size,0 as material_count,0 as team_count,0 as member_count,count(id) as expert_count from
+        emergency_expert_detail
+        ) as a
+    </select>
+
+    <select id="rescueIndexInfo" resultType="java.util.HashMap">
+        select SUM(facility_scale) as facility_scale,SUM(facility_size) as facility_size,SUM(bed_count) as
+        bed_count,SUM(doctor_count) as doctor_count,SUM(ambulance_count) as ambulance_count from emergency_rescue_site
+    </select>
+
+    <select id="rescueTotalInfo" resultType="java.util.HashMap">
+        select facility_name,SUM(facility_scale) as facility_scale,SUM(facility_size) as facility_size,SUM(bed_count) as
+        bed_count,SUM(doctor_count) as doctor_count,SUM(ambulance_count) as ambulance_count from emergency_rescue_site
+        group by facility_name
+    </select>
+
+    <select id="rescueLevelTypeInfo" resultType="java.util.HashMap">
+
+        SELECT DISTINCT
+        ( SELECT count( emergency_type ) FROM emergency_rescue_site WHERE trim(emergency_type) != '' ) AS facilityCount,
+        ( SELECT ROUND( sum( facility_size ), 2 ) FROM emergency_rescue_site) AS sizeSum,
+        ( SELECT sum( bed_count ) FROM emergency_rescue_site ) AS bedCount,
+        ( SELECT sum( doctor_count) FROM emergency_rescue_site ) AS doctCount,
+        <foreach item="item" index="index" collection="typeList" separator=",">
+            (SELECT count(emergency_type) FROM emergency_rescue_site WHERE emergency_type = #{item} AND
+            trim(emergency_type) != '') AS #{item}
+        </foreach>
+        ,
+        <foreach item="item" index="index" collection="levelList" separator=",">
+            (SELECT count(emergency_power) FROM emergency_rescue_site WHERE emergency_power = #{item} AND
+            trim(emergency_power) != '') AS #{item}
+        </foreach>
+        FROM
+        emergency_rescue_site
+    </select>
+
+    <select id="materialQuantityInfo" resultType="java.util.HashMap">
+        SELECT facility_infor,material_name,material_type,material_count,material_address,validity_date FROM
+        emergency_material_input a LEFT JOIN emergency_facility_detail b ON a.facility_code = b.facility_code
+    </select>
+    <select id="materialTypeInfo" resultType="java.util.HashMap">
+        SELECT material_type,count(id) as material_count, sum(material_count) AS materialCount FROM
+        emergency_material_input GROUP BY material_type
+    </select>
+    <select id="materialTypePositionInfo" resultType="java.util.HashMap">
+        SELECT facility_infor,material_type,count(a.id) as material_count FROM emergency_material_input a LEFT JOIN
+        emergency_facility_detail b ON a.facility_code = b.facility_code GROUP BY facility_infor,material_type
+    </select>
+
+    <select id="shelterTypeInfo" resultType="java.util.HashMap">
+        select function_type,sum(facility_scale) as facility_scale,sum(facility_size) as facility_size from
+        emergency_shelter_site GROUP BY function_type
+    </select>
+
+    <select id="shelterTypeInfoTop" resultType="java.util.HashMap">
+        select COUNT(facility_code) AS facilityCode,Round(SUM(facility_size),2) AS facilitySize from
+        emergency_shelter_site
+    </select>
+
+    <select id="teamQuantityInfo" resultType="java.util.HashMap">
+        select industry,administrative_region,team_type,count(distinct a.id) as team_count,count(b.id) as member_count
+        from emergency_team_detail a left join emergency_team_member b on a.team_code=b.team_code GROUP BY
+        industry,administrative_region,team_type
+    </select>
+    <select id="teamIndustryInfo" resultType="java.util.HashMap">
+        select team_type AS industry,count(id) as team_count from emergency_team_detail a GROUP BY team_type
+    </select>
+
+    <select id="teamIndustryInfoTop" resultType="java.util.HashMap">
+        select count(team_code) AS teamCode from emergency_team_detail
+    </select>
+
+    <select id="teamScaleInfoTop" resultType="java.lang.String">
+        select count(id) AS teamScale from emergency_team_member
+    </select>
+
+    <select id="teamTypeInfo" resultType="java.util.HashMap">
+        select team_type,count(id) as team_count from emergency_team_detail a GROUP BY team_type
+    </select>
+    <select id="teamAgeInfo" resultType="java.util.HashMap">
+        select age_range,sum(member_total) as member_total from (
+        select age_range,count(*) as member_total from (
+        select age,
+        case
+        when age between 0 and 20 then '0-20'
+        when age between 21 and 25 then '21-25'
+        when age between 26 and 30 then '26-30'
+        when age between 31 and 35 then '31-35'
+        when age between 36 and 40 then '36-40'
+        when age >40 then '40+'
+        end as age_range
+        from emergency_team_member
+        ) a group by age_range
+        union all
+        select '0-20' as age_range,0 as member_total
+        union all
+        select '21-25' as age_range,0 as member_total
+        union all
+        select '26-30' as age_range,0 as member_total
+        union all
+        select '31-35' as age_range,0 as member_total
+        union all
+        select '36-40' as age_range,0 as member_total
+        union all
+        select '40+' as age_range,0 as member_total ) b
+        GROUP BY age_range
+    </select>
+    <select id="expertQuantityInfo" resultType="java.util.HashMap">
+        select leader_unit,expert_type,concat(province,city,area) as area,expert_level,count(id) as expert_count from
+        emergency_expert_detail group by expert_type,concat(province,city,area),area,expert_level
+    </select>
+    <select id="expertEducationInfo" resultType="java.util.HashMap">
+        select expert_type,count(id) as expert_count from emergency_expert_detail group by expert_type
+    </select>
+    <select id="expertEducationInfoTop" resultType="java.util.HashMap">
+        select count(id) AS num from emergency_expert_detail
+    </select>
+    <select id="expertTypeLevelInfo" resultType="java.util.HashMap">
+        select expert_type,expert_level,count(id) as expert_count from emergency_expert_detail group by
+        expert_type,expert_level
+    </select>
+
+    <select id="materialInputPageInfo" resultType="com.resumeims.server.entity.EmergencyMaterialInputEntity">
+        select
+        a.id,a.material_unit,material_name,material_type,facility_infor,material_count,material_address,material_stand_count,input_time,validity_date,a.manager_code,
+        manager,contact_infor from emergency_material_input a
+        left join emergency_facility_detail b on a.facility_code=b.facility_code
+        LEFT JOIN attribute_manager_infor c on c.manager_code=a.manager_code
+        where 1=1
+        <if test="params.materialName != null and params.materialName != ''">
+            and a.material_name like CONCAT(CONCAT('%', #{params.materialName}), '%')
+        </if>
+        <if test="params.materialType != null and params.materialType != ''">
+            and a.material_type like CONCAT(CONCAT('%', #{params.materialType}), '%')
+        </if>
+        <if test="params.facilityInfor != null and params.facilityInfor != ''">
+            and b.facility_infor like CONCAT(CONCAT('%', #{params.facilityInfor}), '%')
+        </if>
+        <if test="params.startTime != null and params.startTime != ''">
+            and DATE_FORMAT(a.update_time,'%Y-%m-%d') <![CDATA[ >= ]]> #{params.startTime}
+        </if>
+        <if test="params.endTime != null and params.endTime != ''">
+            and DATE_FORMAT(a.update_time,'%Y-%m-%d') <![CDATA[ <= ]]>#{params.endTime}
+        </if>
+        ORDER BY input_time DESC
+    </select>
+
+
+    <select id="materialInputListInfo" resultType="com.resumeims.server.entity.EmergencyMaterialInputEntity">
+        select
+        a.id,a.material_unit,material_name,material_type,material_code,facility_infor,material_count,material_stand_count,input_time,validity_date,a.manager_code,manager,contact_infor
+        from emergency_material_input a left join emergency_facility_detail b on a.facility_code=b.facility_code LEFT
+        JOIN attribute_manager_infor c on c.manager_code=a.manager_code
+        where 1=1
+        <if test="params.materialName != null and params.materialName != ''">
+            and a.material_name like CONCAT(CONCAT('%', #{params.materialName}), '%')
+        </if>
+        <if test="params.materialType != null and params.materialType != ''">
+            and a.material_type like CONCAT(CONCAT('%', #{params.materialType}), '%')
+        </if>
+        <if test="params.facilityInfor != null and params.facilityInfor != ''">
+            and b.facility_infor like CONCAT(CONCAT('%', #{params.facilityInfor}), '%')
+        </if>
+        <if test="params.startTime != null and params.startTime != ''">
+            and DATE_FORMAT(a.update_time,'%Y-%m-%d') <![CDATA[ >= ]]> #{params.startTime}
+        </if>
+        <if test="params.endTime != null and params.endTime != ''">
+            and DATE_FORMAT(a.update_time,'%Y-%m-%d') <![CDATA[ <= ]]>#{params.endTime}
+        </if>
+    </select>
+
+    <select id="rescueValue" resultType="java.util.HashMap">
+        SELECT dictionary_id,dictionary_type,`code`,`name` FROM c_common_dictionary_item WHERE dictionary_type =
+        #{type,jdbcType=VARCHAR}
+    </select>
+
+    <select id="selectManagerCode" resultType="java.util.HashMap">
+        SELECT manager_code ,manager FROM `attribute_manager_infor`
+    </select>
+</mapper>

@@ -1,31 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="88f9a2c9-cd6a-46ce-8b32-2ba446bff068" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/DataBaseConfig/DruidConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/DataBaseConfig/DruidConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resume_config/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/resume_config/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resume_config/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/resume_config/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resume_config/target/resume_config-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/resume_config/target/resume_config-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resume_server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resume_server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resume_server/resume-server-biz/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resume_server/resume-server-biz/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resume_server/resume-server-biz/src/main/java/com/resumeims/server/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resume_server/resume-server-biz/src/main/java/com/resumeims/server/dao/EmergencyMaterialInputMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/resume_server/resume-server-biz/src/main/java/com/resumeims/server/dao/EmergencyMaterialInputMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resume_server/resume-server-controller/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resume_server/resume-server-controller/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resume_server/resume-server-controller/src/main/java/com/resumeims/server/controller/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resume_server/resume-server-entity/src/main/java/com/resumeims/server/dto/EmergencyMaterialInputUpdateDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/resume_server/resume-server-entity/src/main/java/com/resumeims/server/dto/EmergencyMaterialInputUpdateDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resume_server/resume-server-run/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resume_server/resume-server-run/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resume_server/resume-server-run/src/main/java/com/resumeims/server/ResumeServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/resume_server/resume-server-run/src/main/java/com/resumeims/server/ResumeServerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resume_server/resume-server-run/src/main/resources/tanbao-eecp-server.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resume_server/resume-server-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resume_server/resume-server-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resume_server/resume-server-service/src/main/java/com/resumeims/server/services/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resume_server/resume-server-service/src/main/java/com/resumeims/server/services/EmergencyMaterialInputService.java" beforeDir="false" afterPath="$PROJECT_DIR$/resume_server/resume-server-service/src/main/java/com/resumeims/server/EmergencyMaterialInputService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resume_server/resume-server-service/src/main/java/com/resumeims/server/services/impl/EmergencyMaterialInputServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/resume_server/resume-server-service/src/main/java/com/resumeims/server/impl/EmergencyMaterialInputServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resume_server/resume-server-service/src/main/java/com/resumeims/server/services/impl/SuperServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/resume_server/resume-server-service/src/main/java/com/resumeims/server/impl/SuperServiceImpl.java" afterDir="false" />
-    </list>
+    <list default="true" id="88f9a2c9-cd6a-46ce-8b32-2ba446bff068" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -157,11 +133,6 @@
                 <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
                 <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
             </expand>
             <select />
           </treeState>
@@ -192,7 +163,7 @@
       <workItem from="1622986186588" duration="4733000" />
       <workItem from="1622990945308" duration="522000" />
       <workItem from="1622991515351" duration="1562000" />
-      <workItem from="1623027588827" duration="13513000" />
+      <workItem from="1623027588827" duration="14025000" />
     </task>
     <task id="LOCAL-00001" summary="增加全局配置resume-config模块">
       <created>1622943683119</created>
@@ -229,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623028249400</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Swagger2.0文档整合">
+      <created>1623046701763</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1623046701763</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,7 +241,8 @@
     <MESSAGE value="增加全局配置resume-eureka模块" />
     <MESSAGE value="增加服务resume-server模块" />
     <MESSAGE value="完善项目整体模块设置" />
-    <option name="LAST_COMMIT_MESSAGE" value="完善项目整体模块设置" />
+    <MESSAGE value="Swagger2.0文档整合" />
+    <option name="LAST_COMMIT_MESSAGE" value="Swagger2.0文档整合" />
   </component>
   <component name="WindowStateProjectService">
     <state x="392" y="91" key="#Inspections" timestamp="1622983351386">
@@ -306,10 +285,10 @@
       <screen x="62" y="0" width="1474" height="864" />
     </state>
     <state x="421" y="282" key="#xdebugger.evaluate/62.0.1474.864@62.0.1474.864" timestamp="1623046399335" />
-    <state x="263" y="30" key="CommitChangelistDialog2" timestamp="1623028245679">
+    <state x="263" y="30" key="CommitChangelistDialog2" timestamp="1623046811546">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
-    <state x="263" y="30" key="CommitChangelistDialog2/62.0.1474.864@62.0.1474.864" timestamp="1623028245679" />
+    <state x="263" y="30" key="CommitChangelistDialog2/62.0.1474.864@62.0.1474.864" timestamp="1623046811546" />
     <state width="447" height="466" key="DebuggerActiveHint" timestamp="1622883787248">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
@@ -322,62 +301,62 @@
       <screen x="62" y="0" width="1474" height="864" />
     </state>
     <state x="581" y="188" key="FileChooserDialogImpl/62.0.1474.864@62.0.1474.864" timestamp="1622886708263" />
-    <state width="1073" height="319" key="GridCell.Tab.0.bottom" timestamp="1623046471444">
+    <state width="1073" height="319" key="GridCell.Tab.0.bottom" timestamp="1623046697985">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
-    <state width="1073" height="319" key="GridCell.Tab.0.bottom/62.0.1474.864@62.0.1474.864" timestamp="1623046471444" />
-    <state width="1073" height="319" key="GridCell.Tab.0.center" timestamp="1623046471443">
+    <state width="1073" height="319" key="GridCell.Tab.0.bottom/62.0.1474.864@62.0.1474.864" timestamp="1623046697985" />
+    <state width="1073" height="319" key="GridCell.Tab.0.center" timestamp="1623046697985">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
-    <state width="1073" height="319" key="GridCell.Tab.0.center/62.0.1474.864@62.0.1474.864" timestamp="1623046471443" />
-    <state width="1073" height="319" key="GridCell.Tab.0.left" timestamp="1623046471443">
+    <state width="1073" height="319" key="GridCell.Tab.0.center/62.0.1474.864@62.0.1474.864" timestamp="1623046697985" />
+    <state width="1073" height="319" key="GridCell.Tab.0.left" timestamp="1623046697985">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
-    <state width="1073" height="319" key="GridCell.Tab.0.left/62.0.1474.864@62.0.1474.864" timestamp="1623046471443" />
-    <state width="1073" height="319" key="GridCell.Tab.0.right" timestamp="1623046471444">
+    <state width="1073" height="319" key="GridCell.Tab.0.left/62.0.1474.864@62.0.1474.864" timestamp="1623046697985" />
+    <state width="1073" height="319" key="GridCell.Tab.0.right" timestamp="1623046697985">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
-    <state width="1073" height="319" key="GridCell.Tab.0.right/62.0.1474.864@62.0.1474.864" timestamp="1623046471444" />
-    <state width="1073" height="319" key="GridCell.Tab.1.bottom" timestamp="1623046471444">
+    <state width="1073" height="319" key="GridCell.Tab.0.right/62.0.1474.864@62.0.1474.864" timestamp="1623046697985" />
+    <state width="1073" height="319" key="GridCell.Tab.1.bottom" timestamp="1623046697986">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
-    <state width="1073" height="319" key="GridCell.Tab.1.bottom/62.0.1474.864@62.0.1474.864" timestamp="1623046471444" />
-    <state width="1073" height="319" key="GridCell.Tab.1.center" timestamp="1623046471444">
+    <state width="1073" height="319" key="GridCell.Tab.1.bottom/62.0.1474.864@62.0.1474.864" timestamp="1623046697986" />
+    <state width="1073" height="319" key="GridCell.Tab.1.center" timestamp="1623046697986">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
-    <state width="1073" height="319" key="GridCell.Tab.1.center/62.0.1474.864@62.0.1474.864" timestamp="1623046471444" />
-    <state width="1073" height="319" key="GridCell.Tab.1.left" timestamp="1623046471444">
+    <state width="1073" height="319" key="GridCell.Tab.1.center/62.0.1474.864@62.0.1474.864" timestamp="1623046697986" />
+    <state width="1073" height="319" key="GridCell.Tab.1.left" timestamp="1623046697986">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
-    <state width="1073" height="319" key="GridCell.Tab.1.left/62.0.1474.864@62.0.1474.864" timestamp="1623046471444" />
-    <state width="1073" height="319" key="GridCell.Tab.1.right" timestamp="1623046471444">
+    <state width="1073" height="319" key="GridCell.Tab.1.left/62.0.1474.864@62.0.1474.864" timestamp="1623046697986" />
+    <state width="1073" height="319" key="GridCell.Tab.1.right" timestamp="1623046697986">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
-    <state width="1073" height="319" key="GridCell.Tab.1.right/62.0.1474.864@62.0.1474.864" timestamp="1623046471444" />
-    <state width="1073" height="319" key="GridCell.Tab.2.bottom" timestamp="1623046471444">
+    <state width="1073" height="319" key="GridCell.Tab.1.right/62.0.1474.864@62.0.1474.864" timestamp="1623046697986" />
+    <state width="1073" height="319" key="GridCell.Tab.2.bottom" timestamp="1623046697987">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
-    <state width="1073" height="319" key="GridCell.Tab.2.bottom/62.0.1474.864@62.0.1474.864" timestamp="1623046471444" />
-    <state width="1073" height="319" key="GridCell.Tab.2.center" timestamp="1623046471444">
+    <state width="1073" height="319" key="GridCell.Tab.2.bottom/62.0.1474.864@62.0.1474.864" timestamp="1623046697987" />
+    <state width="1073" height="319" key="GridCell.Tab.2.center" timestamp="1623046697987">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
-    <state width="1073" height="319" key="GridCell.Tab.2.center/62.0.1474.864@62.0.1474.864" timestamp="1623046471444" />
-    <state width="1073" height="319" key="GridCell.Tab.2.left" timestamp="1623046471444">
+    <state width="1073" height="319" key="GridCell.Tab.2.center/62.0.1474.864@62.0.1474.864" timestamp="1623046697987" />
+    <state width="1073" height="319" key="GridCell.Tab.2.left" timestamp="1623046697986">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
-    <state width="1073" height="319" key="GridCell.Tab.2.left/62.0.1474.864@62.0.1474.864" timestamp="1623046471444" />
-    <state width="1073" height="319" key="GridCell.Tab.2.right" timestamp="1623046471444">
+    <state width="1073" height="319" key="GridCell.Tab.2.left/62.0.1474.864@62.0.1474.864" timestamp="1623046697986" />
+    <state width="1073" height="319" key="GridCell.Tab.2.right" timestamp="1623046697987">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
-    <state width="1073" height="319" key="GridCell.Tab.2.right/62.0.1474.864@62.0.1474.864" timestamp="1623046471444" />
+    <state width="1073" height="319" key="GridCell.Tab.2.right/62.0.1474.864@62.0.1474.864" timestamp="1623046697987" />
     <state x="330" y="91" key="Maven.ArtifactSearchDialog" timestamp="1622982138077">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
     <state x="330" y="91" key="Maven.ArtifactSearchDialog/62.0.1474.864@62.0.1474.864" timestamp="1622982138077" />
-    <state x="492" y="146" key="RollbackChangesDialog" timestamp="1623028175677">
+    <state x="492" y="146" key="RollbackChangesDialog" timestamp="1623046601401">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
-    <state x="492" y="146" key="RollbackChangesDialog/62.0.1474.864@62.0.1474.864" timestamp="1623028175677" />
+    <state x="492" y="146" key="RollbackChangesDialog/62.0.1474.864@62.0.1474.864" timestamp="1623046601401" />
     <state x="301" y="75" key="SettingsEditor" timestamp="1622951778098">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
@@ -418,16 +397,5 @@
       <screen x="62" y="0" width="1474" height="864" />
     </state>
     <state x="263" y="227" key="new project wizard/62.0.1474.864@62.0.1474.864" timestamp="1622985825253" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/resume_server/resume-server-controller/src/main/java/com/resumeims/server/swagger/SwaggerConfiguration.java</url>
-          <line>21</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
