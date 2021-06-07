@@ -21,7 +21,7 @@ import java.util.Map;
  * @date 2020-11-10
  */
 @Repository
-@Mapper
+//@Mapper
 public interface EmergencyMaterialInputMapper extends SuperMapper<EmergencyMaterialInput> {
     List<Map<String, Object>> populationIndexInfo();
 
