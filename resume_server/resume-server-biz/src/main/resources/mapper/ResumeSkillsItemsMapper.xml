@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.resumeims.server.dao.ResumeSkillsItemsMapper">
+  <resultMap id="BaseResultMap" type="com.resumeims.server.entity.ResumeSkillsItems">
+    <id column="item_id" jdbcType="BIGINT" property="itemId" />
+    <result column="item_one" jdbcType="VARCHAR" property="itemOne" />
+    <result column="item_one_value" jdbcType="VARCHAR" property="itemOneValue" />
+    <result column="item_two" jdbcType="VARCHAR" property="itemTwo" />
+    <result column="item_two_value" jdbcType="VARCHAR" property="itemTwoValue" />
+    <result column="item_thrid" jdbcType="VARCHAR" property="itemThrid" />
+    <result column="item_thrid_value" jdbcType="VARCHAR" property="itemThridValue" />
+    <result column="item_four" jdbcType="VARCHAR" property="itemFour" />
+    <result column="item_four_value" jdbcType="VARCHAR" property="itemFourValue" />
+    <result column="item_five" jdbcType="VARCHAR" property="itemFive" />
+    <result column="item_five_value" jdbcType="VARCHAR" property="itemFiveValue" />
+    <result column="item_six" jdbcType="VARCHAR" property="itemSix" />
+    <result column="item_six_value" jdbcType="VARCHAR" property="itemSixValue" />
+    <result column="create_user" jdbcType="BIGINT" property="createUser" />
+    <result column="update_user" jdbcType="BIGINT" property="updateUser" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    item_id, item_one, item_one_value, item_two, item_two_value, item_thrid, item_thrid_value, 
+    item_four, item_four_value, item_five, item_five_value, item_six, item_six_value, 
+    create_user, update_user, create_time, update_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_resume_skills_items
+    where item_id = #{itemId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from t_resume_skills_items
+    where item_id = #{itemId,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.resumeims.server.entity.ResumeSkillsItems">
+    insert into t_resume_skills_items (item_id, item_one, item_one_value, 
+      item_two, item_two_value, item_thrid, 
+      item_thrid_value, item_four, item_four_value, 
+      item_five, item_five_value, item_six, 
+      item_six_value, create_user, update_user, 
+      create_time, update_time)
+    values (#{itemId,jdbcType=BIGINT}, #{itemOne,jdbcType=VARCHAR}, #{itemOneValue,jdbcType=VARCHAR}, 
+      #{itemTwo,jdbcType=VARCHAR}, #{itemTwoValue,jdbcType=VARCHAR}, #{itemThrid,jdbcType=VARCHAR}, 
+      #{itemThridValue,jdbcType=VARCHAR}, #{itemFour,jdbcType=VARCHAR}, #{itemFourValue,jdbcType=VARCHAR}, 
+      #{itemFive,jdbcType=VARCHAR}, #{itemFiveValue,jdbcType=VARCHAR}, #{itemSix,jdbcType=VARCHAR}, 
+      #{itemSixValue,jdbcType=VARCHAR}, #{createUser,jdbcType=BIGINT}, #{updateUser,jdbcType=BIGINT}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.resumeims.server.entity.ResumeSkillsItems">
+    insert into t_resume_skills_items
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="itemId != null">
+        item_id,
+      </if>
+      <if test="itemOne != null">
+        item_one,
+      </if>
+      <if test="itemOneValue != null">
+        item_one_value,
+      </if>
+      <if test="itemTwo != null">
+        item_two,
+      </if>
+      <if test="itemTwoValue != null">
+        item_two_value,
+      </if>
+      <if test="itemThrid != null">
+        item_thrid,
+      </if>
+      <if test="itemThridValue != null">
+        item_thrid_value,
+      </if>
+      <if test="itemFour != null">
+        item_four,
+      </if>
+      <if test="itemFourValue != null">
+        item_four_value,
+      </if>
+      <if test="itemFive != null">
+        item_five,
+      </if>
+      <if test="itemFiveValue != null">
+        item_five_value,
+      </if>
+      <if test="itemSix != null">
+        item_six,
+      </if>
+      <if test="itemSixValue != null">
+        item_six_value,
+      </if>
+      <if test="createUser != null">
+        create_user,
+      </if>
+      <if test="updateUser != null">
+        update_user,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="itemId != null">
+        #{itemId,jdbcType=BIGINT},
+      </if>
+      <if test="itemOne != null">
+        #{itemOne,jdbcType=VARCHAR},
+      </if>
+      <if test="itemOneValue != null">
+        #{itemOneValue,jdbcType=VARCHAR},
+      </if>
+      <if test="itemTwo != null">
+        #{itemTwo,jdbcType=VARCHAR},
+      </if>
+      <if test="itemTwoValue != null">
+        #{itemTwoValue,jdbcType=VARCHAR},
+      </if>
+      <if test="itemThrid != null">
+        #{itemThrid,jdbcType=VARCHAR},
+      </if>
+      <if test="itemThridValue != null">
+        #{itemThridValue,jdbcType=VARCHAR},
+      </if>
+      <if test="itemFour != null">
+        #{itemFour,jdbcType=VARCHAR},
+      </if>
+      <if test="itemFourValue != null">
+        #{itemFourValue,jdbcType=VARCHAR},
+      </if>
+      <if test="itemFive != null">
+        #{itemFive,jdbcType=VARCHAR},
+      </if>
+      <if test="itemFiveValue != null">
+        #{itemFiveValue,jdbcType=VARCHAR},
+      </if>
+      <if test="itemSix != null">
+        #{itemSix,jdbcType=VARCHAR},
+      </if>
+      <if test="itemSixValue != null">
+        #{itemSixValue,jdbcType=VARCHAR},
+      </if>
+      <if test="createUser != null">
+        #{createUser,jdbcType=BIGINT},
+      </if>
+      <if test="updateUser != null">
+        #{updateUser,jdbcType=BIGINT},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.resumeims.server.entity.ResumeSkillsItems">
+    update t_resume_skills_items
+    <set>
+      <if test="itemOne != null">
+        item_one = #{itemOne,jdbcType=VARCHAR},
+      </if>
+      <if test="itemOneValue != null">
+        item_one_value = #{itemOneValue,jdbcType=VARCHAR},
+      </if>
+      <if test="itemTwo != null">
+        item_two = #{itemTwo,jdbcType=VARCHAR},
+      </if>
+      <if test="itemTwoValue != null">
+        item_two_value = #{itemTwoValue,jdbcType=VARCHAR},
+      </if>
+      <if test="itemThrid != null">
+        item_thrid = #{itemThrid,jdbcType=VARCHAR},
+      </if>
+      <if test="itemThridValue != null">
+        item_thrid_value = #{itemThridValue,jdbcType=VARCHAR},
+      </if>
+      <if test="itemFour != null">
+        item_four = #{itemFour,jdbcType=VARCHAR},
+      </if>
+      <if test="itemFourValue != null">
+        item_four_value = #{itemFourValue,jdbcType=VARCHAR},
+      </if>
+      <if test="itemFive != null">
+        item_five = #{itemFive,jdbcType=VARCHAR},
+      </if>
+      <if test="itemFiveValue != null">
+        item_five_value = #{itemFiveValue,jdbcType=VARCHAR},
+      </if>
+      <if test="itemSix != null">
+        item_six = #{itemSix,jdbcType=VARCHAR},
+      </if>
+      <if test="itemSixValue != null">
+        item_six_value = #{itemSixValue,jdbcType=VARCHAR},
+      </if>
+      <if test="createUser != null">
+        create_user = #{createUser,jdbcType=BIGINT},
+      </if>
+      <if test="updateUser != null">
+        update_user = #{updateUser,jdbcType=BIGINT},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where item_id = #{itemId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.resumeims.server.entity.ResumeSkillsItems">
+    update t_resume_skills_items
+    set item_one = #{itemOne,jdbcType=VARCHAR},
+      item_one_value = #{itemOneValue,jdbcType=VARCHAR},
+      item_two = #{itemTwo,jdbcType=VARCHAR},
+      item_two_value = #{itemTwoValue,jdbcType=VARCHAR},
+      item_thrid = #{itemThrid,jdbcType=VARCHAR},
+      item_thrid_value = #{itemThridValue,jdbcType=VARCHAR},
+      item_four = #{itemFour,jdbcType=VARCHAR},
+      item_four_value = #{itemFourValue,jdbcType=VARCHAR},
+      item_five = #{itemFive,jdbcType=VARCHAR},
+      item_five_value = #{itemFiveValue,jdbcType=VARCHAR},
+      item_six = #{itemSix,jdbcType=VARCHAR},
+      item_six_value = #{itemSixValue,jdbcType=VARCHAR},
+      create_user = #{createUser,jdbcType=BIGINT},
+      update_user = #{updateUser,jdbcType=BIGINT},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where item_id = #{itemId,jdbcType=BIGINT}
+  </update>
+</mapper>

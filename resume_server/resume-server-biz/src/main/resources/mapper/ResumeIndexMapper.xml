@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.resumeims.server.dao.ResumeIndexMapper">
+  <resultMap id="BaseResultMap" type="com.resumeims.server.entity.ResumeIndex">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="head_portrait" jdbcType="VARCHAR" property="headPortrait" />
+    <result column="head_portrait_url" jdbcType="VARCHAR" property="headPortraitUrl" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="user_autograph" jdbcType="VARCHAR" property="userAutograph" />
+    <result column="user_background" jdbcType="VARCHAR" property="userBackground" />
+    <result column="user_background_url" jdbcType="VARCHAR" property="userBackgroundUrl" />
+    <result column="create_user" jdbcType="BIGINT" property="createUser" />
+    <result column="update_user" jdbcType="BIGINT" property="updateUser" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, head_portrait, head_portrait_url, user_name, user_autograph, user_background, 
+    user_background_url, create_user, update_user, create_time, update_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_resume_index
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from t_resume_index
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.resumeims.server.entity.ResumeIndex">
+    insert into t_resume_index (id, head_portrait, head_portrait_url, 
+      user_name, user_autograph, user_background, 
+      user_background_url, create_user, update_user, 
+      create_time, update_time)
+    values (#{id,jdbcType=BIGINT}, #{headPortrait,jdbcType=VARCHAR}, #{headPortraitUrl,jdbcType=VARCHAR}, 
+      #{userName,jdbcType=VARCHAR}, #{userAutograph,jdbcType=VARCHAR}, #{userBackground,jdbcType=VARCHAR}, 
+      #{userBackgroundUrl,jdbcType=VARCHAR}, #{createUser,jdbcType=BIGINT}, #{updateUser,jdbcType=BIGINT}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.resumeims.server.entity.ResumeIndex">
+    insert into t_resume_index
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="headPortrait != null">
+        head_portrait,
+      </if>
+      <if test="headPortraitUrl != null">
+        head_portrait_url,
+      </if>
+      <if test="userName != null">
+        user_name,
+      </if>
+      <if test="userAutograph != null">
+        user_autograph,
+      </if>
+      <if test="userBackground != null">
+        user_background,
+      </if>
+      <if test="userBackgroundUrl != null">
+        user_background_url,
+      </if>
+      <if test="createUser != null">
+        create_user,
+      </if>
+      <if test="updateUser != null">
+        update_user,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="headPortrait != null">
+        #{headPortrait,jdbcType=VARCHAR},
+      </if>
+      <if test="headPortraitUrl != null">
+        #{headPortraitUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="userName != null">
+        #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="userAutograph != null">
+        #{userAutograph,jdbcType=VARCHAR},
+      </if>
+      <if test="userBackground != null">
+        #{userBackground,jdbcType=VARCHAR},
+      </if>
+      <if test="userBackgroundUrl != null">
+        #{userBackgroundUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="createUser != null">
+        #{createUser,jdbcType=BIGINT},
+      </if>
+      <if test="updateUser != null">
+        #{updateUser,jdbcType=BIGINT},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.resumeims.server.entity.ResumeIndex">
+    update t_resume_index
+    <set>
+      <if test="headPortrait != null">
+        head_portrait = #{headPortrait,jdbcType=VARCHAR},
+      </if>
+      <if test="headPortraitUrl != null">
+        head_portrait_url = #{headPortraitUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="userName != null">
+        user_name = #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="userAutograph != null">
+        user_autograph = #{userAutograph,jdbcType=VARCHAR},
+      </if>
+      <if test="userBackground != null">
+        user_background = #{userBackground,jdbcType=VARCHAR},
+      </if>
+      <if test="userBackgroundUrl != null">
+        user_background_url = #{userBackgroundUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="createUser != null">
+        create_user = #{createUser,jdbcType=BIGINT},
+      </if>
+      <if test="updateUser != null">
+        update_user = #{updateUser,jdbcType=BIGINT},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.resumeims.server.entity.ResumeIndex">
+    update t_resume_index
+    set head_portrait = #{headPortrait,jdbcType=VARCHAR},
+      head_portrait_url = #{headPortraitUrl,jdbcType=VARCHAR},
+      user_name = #{userName,jdbcType=VARCHAR},
+      user_autograph = #{userAutograph,jdbcType=VARCHAR},
+      user_background = #{userBackground,jdbcType=VARCHAR},
+      user_background_url = #{userBackgroundUrl,jdbcType=VARCHAR},
+      create_user = #{createUser,jdbcType=BIGINT},
+      update_user = #{updateUser,jdbcType=BIGINT},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

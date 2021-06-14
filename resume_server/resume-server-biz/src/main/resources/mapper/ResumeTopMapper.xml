@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.resumeims.server.dao.ResumeTopMapper">
+  <resultMap id="BaseResultMap" type="com.resumeims.server.entity.ResumeTop">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="top_title" jdbcType="VARCHAR" property="topTitle" />
+    <result column="top_first_subtitle" jdbcType="VARCHAR" property="topFirstSubtitle" />
+    <result column="top_second_subtitle" jdbcType="VARCHAR" property="topSecondSubtitle" />
+    <result column="top_third_subtitle" jdbcType="VARCHAR" property="topThirdSubtitle" />
+    <result column="top_four_subtitle" jdbcType="VARCHAR" property="topFourSubtitle" />
+    <result column="top_five_subtitle" jdbcType="VARCHAR" property="topFiveSubtitle" />
+    <result column="top_six_subtitle" jdbcType="VARCHAR" property="topSixSubtitle" />
+    <result column="top_seven_subtitle" jdbcType="VARCHAR" property="topSevenSubtitle" />
+    <result column="create_user" jdbcType="BIGINT" property="createUser" />
+    <result column="update_user" jdbcType="BIGINT" property="updateUser" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, top_title, top_first_subtitle, top_second_subtitle, top_third_subtitle, top_four_subtitle, 
+    top_five_subtitle, top_six_subtitle, top_seven_subtitle, create_user, update_user, 
+    create_time, update_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_resume_top
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from t_resume_top
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.resumeims.server.entity.ResumeTop">
+    insert into t_resume_top (id, top_title, top_first_subtitle, 
+      top_second_subtitle, top_third_subtitle, top_four_subtitle, 
+      top_five_subtitle, top_six_subtitle, top_seven_subtitle, 
+      create_user, update_user, create_time, 
+      update_time)
+    values (#{id,jdbcType=BIGINT}, #{topTitle,jdbcType=VARCHAR}, #{topFirstSubtitle,jdbcType=VARCHAR}, 
+      #{topSecondSubtitle,jdbcType=VARCHAR}, #{topThirdSubtitle,jdbcType=VARCHAR}, #{topFourSubtitle,jdbcType=VARCHAR}, 
+      #{topFiveSubtitle,jdbcType=VARCHAR}, #{topSixSubtitle,jdbcType=VARCHAR}, #{topSevenSubtitle,jdbcType=VARCHAR}, 
+      #{createUser,jdbcType=BIGINT}, #{updateUser,jdbcType=BIGINT}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.resumeims.server.entity.ResumeTop">
+    insert into t_resume_top
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="topTitle != null">
+        top_title,
+      </if>
+      <if test="topFirstSubtitle != null">
+        top_first_subtitle,
+      </if>
+      <if test="topSecondSubtitle != null">
+        top_second_subtitle,
+      </if>
+      <if test="topThirdSubtitle != null">
+        top_third_subtitle,
+      </if>
+      <if test="topFourSubtitle != null">
+        top_four_subtitle,
+      </if>
+      <if test="topFiveSubtitle != null">
+        top_five_subtitle,
+      </if>
+      <if test="topSixSubtitle != null">
+        top_six_subtitle,
+      </if>
+      <if test="topSevenSubtitle != null">
+        top_seven_subtitle,
+      </if>
+      <if test="createUser != null">
+        create_user,
+      </if>
+      <if test="updateUser != null">
+        update_user,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="topTitle != null">
+        #{topTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="topFirstSubtitle != null">
+        #{topFirstSubtitle,jdbcType=VARCHAR},
+      </if>
+      <if test="topSecondSubtitle != null">
+        #{topSecondSubtitle,jdbcType=VARCHAR},
+      </if>
+      <if test="topThirdSubtitle != null">
+        #{topThirdSubtitle,jdbcType=VARCHAR},
+      </if>
+      <if test="topFourSubtitle != null">
+        #{topFourSubtitle,jdbcType=VARCHAR},
+      </if>
+      <if test="topFiveSubtitle != null">
+        #{topFiveSubtitle,jdbcType=VARCHAR},
+      </if>
+      <if test="topSixSubtitle != null">
+        #{topSixSubtitle,jdbcType=VARCHAR},
+      </if>
+      <if test="topSevenSubtitle != null">
+        #{topSevenSubtitle,jdbcType=VARCHAR},
+      </if>
+      <if test="createUser != null">
+        #{createUser,jdbcType=BIGINT},
+      </if>
+      <if test="updateUser != null">
+        #{updateUser,jdbcType=BIGINT},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.resumeims.server.entity.ResumeTop">
+    update t_resume_top
+    <set>
+      <if test="topTitle != null">
+        top_title = #{topTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="topFirstSubtitle != null">
+        top_first_subtitle = #{topFirstSubtitle,jdbcType=VARCHAR},
+      </if>
+      <if test="topSecondSubtitle != null">
+        top_second_subtitle = #{topSecondSubtitle,jdbcType=VARCHAR},
+      </if>
+      <if test="topThirdSubtitle != null">
+        top_third_subtitle = #{topThirdSubtitle,jdbcType=VARCHAR},
+      </if>
+      <if test="topFourSubtitle != null">
+        top_four_subtitle = #{topFourSubtitle,jdbcType=VARCHAR},
+      </if>
+      <if test="topFiveSubtitle != null">
+        top_five_subtitle = #{topFiveSubtitle,jdbcType=VARCHAR},
+      </if>
+      <if test="topSixSubtitle != null">
+        top_six_subtitle = #{topSixSubtitle,jdbcType=VARCHAR},
+      </if>
+      <if test="topSevenSubtitle != null">
+        top_seven_subtitle = #{topSevenSubtitle,jdbcType=VARCHAR},
+      </if>
+      <if test="createUser != null">
+        create_user = #{createUser,jdbcType=BIGINT},
+      </if>
+      <if test="updateUser != null">
+        update_user = #{updateUser,jdbcType=BIGINT},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.resumeims.server.entity.ResumeTop">
+    update t_resume_top
+    set top_title = #{topTitle,jdbcType=VARCHAR},
+      top_first_subtitle = #{topFirstSubtitle,jdbcType=VARCHAR},
+      top_second_subtitle = #{topSecondSubtitle,jdbcType=VARCHAR},
+      top_third_subtitle = #{topThirdSubtitle,jdbcType=VARCHAR},
+      top_four_subtitle = #{topFourSubtitle,jdbcType=VARCHAR},
+      top_five_subtitle = #{topFiveSubtitle,jdbcType=VARCHAR},
+      top_six_subtitle = #{topSixSubtitle,jdbcType=VARCHAR},
+      top_seven_subtitle = #{topSevenSubtitle,jdbcType=VARCHAR},
+      create_user = #{createUser,jdbcType=BIGINT},
+      update_user = #{updateUser,jdbcType=BIGINT},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

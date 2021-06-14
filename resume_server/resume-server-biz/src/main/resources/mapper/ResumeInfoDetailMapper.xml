@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.resumeims.server.dao.ResumeInfoDetailMapper">
+  <resultMap id="BaseResultMap" type="com.resumeims.server.entity.ResumeInfoDetail">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="user_political_outlook" jdbcType="VARCHAR" property="userPoliticalOutlook" />
+    <result column="user_age" jdbcType="VARCHAR" property="userAge" />
+    <result column="user_city" jdbcType="VARCHAR" property="userCity" />
+    <result column="user_hometown" jdbcType="VARCHAR" property="userHometown" />
+    <result column="user_universities" jdbcType="VARCHAR" property="userUniversities" />
+    <result column="user_email" jdbcType="VARCHAR" property="userEmail" />
+    <result column="user_telphone" jdbcType="VARCHAR" property="userTelphone" />
+    <result column="user_education" jdbcType="VARCHAR" property="userEducation" />
+    <result column="user_date_of_birth" jdbcType="TIMESTAMP" property="userDateOfBirth" />
+    <result column="user_experience" jdbcType="VARCHAR" property="userExperience" />
+    <result column="user_picture_url_one" jdbcType="VARCHAR" property="userPictureUrlOne" />
+    <result column="user_picture_url_two" jdbcType="VARCHAR" property="userPictureUrlTwo" />
+    <result column="user_picture_url_three" jdbcType="VARCHAR" property="userPictureUrlThree" />
+    <result column="user_picture_url_four" jdbcType="VARCHAR" property="userPictureUrlFour" />
+    <result column="create_user" jdbcType="BIGINT" property="createUser" />
+    <result column="update_user" jdbcType="BIGINT" property="updateUser" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, user_name, user_political_outlook, user_age, user_city, user_hometown, user_universities, 
+    user_email, user_telphone, user_education, user_date_of_birth, user_experience, user_picture_url_one, 
+    user_picture_url_two, user_picture_url_three, user_picture_url_four, create_user, 
+    update_user, create_time, update_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_resume_info_detail
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from t_resume_info_detail
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.resumeims.server.entity.ResumeInfoDetail">
+    insert into t_resume_info_detail (id, user_name, user_political_outlook, 
+      user_age, user_city, user_hometown, 
+      user_universities, user_email, user_telphone, 
+      user_education, user_date_of_birth, user_experience, 
+      user_picture_url_one, user_picture_url_two, user_picture_url_three, 
+      user_picture_url_four, create_user, update_user, 
+      create_time, update_time)
+    values (#{id,jdbcType=BIGINT}, #{userName,jdbcType=VARCHAR}, #{userPoliticalOutlook,jdbcType=VARCHAR}, 
+      #{userAge,jdbcType=VARCHAR}, #{userCity,jdbcType=VARCHAR}, #{userHometown,jdbcType=VARCHAR}, 
+      #{userUniversities,jdbcType=VARCHAR}, #{userEmail,jdbcType=VARCHAR}, #{userTelphone,jdbcType=VARCHAR}, 
+      #{userEducation,jdbcType=VARCHAR}, #{userDateOfBirth,jdbcType=TIMESTAMP}, #{userExperience,jdbcType=VARCHAR}, 
+      #{userPictureUrlOne,jdbcType=VARCHAR}, #{userPictureUrlTwo,jdbcType=VARCHAR}, #{userPictureUrlThree,jdbcType=VARCHAR}, 
+      #{userPictureUrlFour,jdbcType=VARCHAR}, #{createUser,jdbcType=BIGINT}, #{updateUser,jdbcType=BIGINT}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.resumeims.server.entity.ResumeInfoDetail">
+    insert into t_resume_info_detail
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="userName != null">
+        user_name,
+      </if>
+      <if test="userPoliticalOutlook != null">
+        user_political_outlook,
+      </if>
+      <if test="userAge != null">
+        user_age,
+      </if>
+      <if test="userCity != null">
+        user_city,
+      </if>
+      <if test="userHometown != null">
+        user_hometown,
+      </if>
+      <if test="userUniversities != null">
+        user_universities,
+      </if>
+      <if test="userEmail != null">
+        user_email,
+      </if>
+      <if test="userTelphone != null">
+        user_telphone,
+      </if>
+      <if test="userEducation != null">
+        user_education,
+      </if>
+      <if test="userDateOfBirth != null">
+        user_date_of_birth,
+      </if>
+      <if test="userExperience != null">
+        user_experience,
+      </if>
+      <if test="userPictureUrlOne != null">
+        user_picture_url_one,
+      </if>
+      <if test="userPictureUrlTwo != null">
+        user_picture_url_two,
+      </if>
+      <if test="userPictureUrlThree != null">
+        user_picture_url_three,
+      </if>
+      <if test="userPictureUrlFour != null">
+        user_picture_url_four,
+      </if>
+      <if test="createUser != null">
+        create_user,
+      </if>
+      <if test="updateUser != null">
+        update_user,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="userName != null">
+        #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="userPoliticalOutlook != null">
+        #{userPoliticalOutlook,jdbcType=VARCHAR},
+      </if>
+      <if test="userAge != null">
+        #{userAge,jdbcType=VARCHAR},
+      </if>
+      <if test="userCity != null">
+        #{userCity,jdbcType=VARCHAR},
+      </if>
+      <if test="userHometown != null">
+        #{userHometown,jdbcType=VARCHAR},
+      </if>
+      <if test="userUniversities != null">
+        #{userUniversities,jdbcType=VARCHAR},
+      </if>
+      <if test="userEmail != null">
+        #{userEmail,jdbcType=VARCHAR},
+      </if>
+      <if test="userTelphone != null">
+        #{userTelphone,jdbcType=VARCHAR},
+      </if>
+      <if test="userEducation != null">
+        #{userEducation,jdbcType=VARCHAR},
+      </if>
+      <if test="userDateOfBirth != null">
+        #{userDateOfBirth,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userExperience != null">
+        #{userExperience,jdbcType=VARCHAR},
+      </if>
+      <if test="userPictureUrlOne != null">
+        #{userPictureUrlOne,jdbcType=VARCHAR},
+      </if>
+      <if test="userPictureUrlTwo != null">
+        #{userPictureUrlTwo,jdbcType=VARCHAR},
+      </if>
+      <if test="userPictureUrlThree != null">
+        #{userPictureUrlThree,jdbcType=VARCHAR},
+      </if>
+      <if test="userPictureUrlFour != null">
+        #{userPictureUrlFour,jdbcType=VARCHAR},
+      </if>
+      <if test="createUser != null">
+        #{createUser,jdbcType=BIGINT},
+      </if>
+      <if test="updateUser != null">
+        #{updateUser,jdbcType=BIGINT},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.resumeims.server.entity.ResumeInfoDetail">
+    update t_resume_info_detail
+    <set>
+      <if test="userName != null">
+        user_name = #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="userPoliticalOutlook != null">
+        user_political_outlook = #{userPoliticalOutlook,jdbcType=VARCHAR},
+      </if>
+      <if test="userAge != null">
+        user_age = #{userAge,jdbcType=VARCHAR},
+      </if>
+      <if test="userCity != null">
+        user_city = #{userCity,jdbcType=VARCHAR},
+      </if>
+      <if test="userHometown != null">
+        user_hometown = #{userHometown,jdbcType=VARCHAR},
+      </if>
+      <if test="userUniversities != null">
+        user_universities = #{userUniversities,jdbcType=VARCHAR},
+      </if>
+      <if test="userEmail != null">
+        user_email = #{userEmail,jdbcType=VARCHAR},
+      </if>
+      <if test="userTelphone != null">
+        user_telphone = #{userTelphone,jdbcType=VARCHAR},
+      </if>
+      <if test="userEducation != null">
+        user_education = #{userEducation,jdbcType=VARCHAR},
+      </if>
+      <if test="userDateOfBirth != null">
+        user_date_of_birth = #{userDateOfBirth,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userExperience != null">
+        user_experience = #{userExperience,jdbcType=VARCHAR},
+      </if>
+      <if test="userPictureUrlOne != null">
+        user_picture_url_one = #{userPictureUrlOne,jdbcType=VARCHAR},
+      </if>
+      <if test="userPictureUrlTwo != null">
+        user_picture_url_two = #{userPictureUrlTwo,jdbcType=VARCHAR},
+      </if>
+      <if test="userPictureUrlThree != null">
+        user_picture_url_three = #{userPictureUrlThree,jdbcType=VARCHAR},
+      </if>
+      <if test="userPictureUrlFour != null">
+        user_picture_url_four = #{userPictureUrlFour,jdbcType=VARCHAR},
+      </if>
+      <if test="createUser != null">
+        create_user = #{createUser,jdbcType=BIGINT},
+      </if>
+      <if test="updateUser != null">
+        update_user = #{updateUser,jdbcType=BIGINT},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.resumeims.server.entity.ResumeInfoDetail">
+    update t_resume_info_detail
+    set user_name = #{userName,jdbcType=VARCHAR},
+      user_political_outlook = #{userPoliticalOutlook,jdbcType=VARCHAR},
+      user_age = #{userAge,jdbcType=VARCHAR},
+      user_city = #{userCity,jdbcType=VARCHAR},
+      user_hometown = #{userHometown,jdbcType=VARCHAR},
+      user_universities = #{userUniversities,jdbcType=VARCHAR},
+      user_email = #{userEmail,jdbcType=VARCHAR},
+      user_telphone = #{userTelphone,jdbcType=VARCHAR},
+      user_education = #{userEducation,jdbcType=VARCHAR},
+      user_date_of_birth = #{userDateOfBirth,jdbcType=TIMESTAMP},
+      user_experience = #{userExperience,jdbcType=VARCHAR},
+      user_picture_url_one = #{userPictureUrlOne,jdbcType=VARCHAR},
+      user_picture_url_two = #{userPictureUrlTwo,jdbcType=VARCHAR},
+      user_picture_url_three = #{userPictureUrlThree,jdbcType=VARCHAR},
+      user_picture_url_four = #{userPictureUrlFour,jdbcType=VARCHAR},
+      create_user = #{createUser,jdbcType=BIGINT},
+      update_user = #{updateUser,jdbcType=BIGINT},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>
