@@ -1,11 +1,9 @@
 package com.resumeims.server.controller;
 
 import com.resumeims.resume_config.basecontroller.SuperController;
-import com.resumeims.server.ResumeSkillsItemsService;
-import com.resumeims.server.dto.ResumeSkillsItemsPageDTO;
-import com.resumeims.server.dto.ResumeSkillsItemsSaveDTO;
-import com.resumeims.server.dto.ResumeSkillsItemsUpdateDTO;
-import com.resumeims.server.entity.ResumeSkillsItems;
+import com.resumeims.server.ResumeExperienceService;
+import com.resumeims.server.dto.*;
+import com.resumeims.server.entity.ResumeExperience;
 import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,9 +15,9 @@ import org.springframework.web.bind.annotation.RestController;
  * @author ：zjc
  * @ProjectName: ResumeIMS
  * @Package: com.resumeims.server.controller
- * @ClassName: ResumeSkillsItemsController
+ * @ClassName: ResumeStudyAndExperienceController
  * @date ：Created in 2021/6/13 23:00
- * @description：简历主页信息控制层
+ * @description：工作经历控制层
  * @modified By：
  * @version: v1.0.0$
  */
@@ -27,11 +25,11 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 @Validated
 @RestController
-@RequestMapping("/resumeSkillsItemsController")
-@Api(value = "ResumeSkillsItemsController", tags = "简历主页信息控制层")
-public class ResumeSkillsItemsController extends SuperController<ResumeSkillsItemsService, Long, ResumeSkillsItems, ResumeSkillsItemsPageDTO, ResumeSkillsItemsSaveDTO, ResumeSkillsItemsUpdateDTO> {
+@RequestMapping("/resumeExperienceController")
+@Api(value = "ResumeExperienceController", tags = "工作经历控制层")
+public class ResumeExperienceController extends SuperController<ResumeExperienceService, Long, ResumeExperience, ResumeExperiencePageDTO, ResumeExperienceSaveDTO, ResumeExperienceUpdateDTO> {
     @Autowired
-    private ResumeSkillsItemsService resumeSkillsItemsService;
+    private ResumeExperienceService resumeExperienceService;
 
     /**
      * Excel导入后的操作

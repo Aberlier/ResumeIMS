@@ -27,7 +27,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/resumeIndexController")
 @Api(value = "ResumeIndexController", tags = "简历主页信息控制层")
-public class ResumeIndexController extends SuperController<ResumeIndexService, Long,ResumeIndex, ResumeIndexPageDTO, ResumeIndexSaveDTO, ResumeIndexUpdateDTO> {
+public class ResumeIndexController extends SuperController<ResumeIndexService, Long, ResumeIndex, ResumeIndexPageDTO, ResumeIndexSaveDTO, ResumeIndexUpdateDTO> {
     @Autowired
     private ResumeIndexService resumeIndexService;
 

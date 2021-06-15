@@ -1,7 +1,6 @@
 package com.resumeims.server;
 
 import com.resumeims.resume_config.baseservices.SuperService;
-import com.resumeims.server.entity.ResumeIndex;
 import com.resumeims.server.entity.ResumeTop;
 
 /**

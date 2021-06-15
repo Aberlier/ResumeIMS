@@ -1,10 +1,15 @@
 package com.resumeims.server.dto;
 
+import cn.afterturn.easypoi.excel.annotation.Excel;
+import com.baomidou.mybatisplus.annotation.TableField;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.*;
 import lombok.experimental.Accessors;
+import org.hibernate.validator.constraints.Length;
 
 import java.io.Serializable;
+
+import static com.baomidou.mybatisplus.annotation.SqlCondition.LIKE;
 
 @Data
 @NoArgsConstructor
@@ -16,37 +21,52 @@ import java.io.Serializable;
 public class ResumeTopPageDTO implements Serializable {
     private static final long serialVersionUID = 1L;
     /**
-     * 头像名称
+     * 顶部标题
      */
-    @ApiModelProperty(value = "头像名称")
-    private String headPortrait;
-
+    @ApiModelProperty(value = "顶部标题")
+    @Length(max = 50, message = "顶部标题长度不能超过50")
+    private String topTitle;
     /**
-     * 头像地址
+     * 第一个顶部标题
      */
-    @ApiModelProperty(value = "头像地址")
-    private String headPortraitUrl;
-
+    @ApiModelProperty(value = "第一个顶部标题")
+    @Length(max = 50, message = "第一个顶部标题长度不能超过50")
+    private String topFirstSubtitle;
     /**
-     * 用户名称
+     * 第二个顶部标题
      */
-    @ApiModelProperty(value = "用户名称")
-    private String userName;
-
+    @ApiModelProperty(value = "第二个顶部标题")
+    @Length(max = 50, message = "第二个顶部标题长度不能超过50")
+    private String topSecondSubtitle;
     /**
-     * 用户签名
+     * 第三个顶部标题
      */
-    @ApiModelProperty(value = "用户签名")
-    private String userAutograph;
+    @ApiModelProperty(value = "第三个顶部标题")
+    @Length(max = 50, message = "第三个顶部标题长度不能超过50")
+    private String topThirdSubtitle;
     /**
-     * 用户背景图片
+     * 第四个顶部标题
      */
-    @ApiModelProperty(value = "用户背景图片")
-    private String userBackground;
+    @ApiModelProperty(value = "第四个顶部标题")
+    @Length(max = 50, message = "第四个顶部标题长度不能超过50")
+    private String topFourSubtitle;
     /**
-     * 用户背景图片地址
+     * 第五个顶部标题
      */
-    @ApiModelProperty(value = "用户背景图片地址")
-    private String userBackgroundUrl;
+    @ApiModelProperty(value = "第五个顶部标题")
+    @Length(max = 50, message = "第五个顶部标题长度不能超过50")
+    private String topFiveSubtitle;
+    /**
+     * 第六个顶部标题
+     */
+    @ApiModelProperty(value = "第六个顶部标题")
+    @Length(max = 50, message = "顶第六个顶部标题长度不能超过50")
+    private String topSixSubtitle;
+    /**
+     * 第七个顶部标题
+     */
+    @ApiModelProperty(value = "第七个顶部标题")
+    @Length(max = 50, message = "第七个顶部标题长度不能超过50")
+    private String topSevenSubtitle;
 
 }

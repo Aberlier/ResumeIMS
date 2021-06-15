@@ -73,7 +73,7 @@ public class EmergencyMaterialInputEntity extends Entity<Long> {
     /**
      * 物资数量
      */
-    @ApiModelProperty(value = "物资数量")
+    @ApiModelProperty(value = "物资数量",example = "0")
     @TableField("material_count")
     @Excel(name = "物资数量")
     private Integer materialCount;
@@ -81,7 +81,7 @@ public class EmergencyMaterialInputEntity extends Entity<Long> {
     /**
      * 标准数量
      */
-    @ApiModelProperty(value = "标准数量")
+    @ApiModelProperty(value = "标准数量",example = "0")
     @TableField("material_stand_count")
     @Excel(name = "标准数量")
     private Integer materialStandCount;

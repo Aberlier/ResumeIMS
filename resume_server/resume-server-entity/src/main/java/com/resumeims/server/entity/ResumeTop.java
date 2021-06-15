@@ -10,6 +10,7 @@ import lombok.*;
 import lombok.experimental.Accessors;
 import org.hibernate.validator.constraints.Length;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 import static com.baomidou.mybatisplus.annotation.SqlCondition.LIKE;
@@ -91,8 +92,12 @@ public class ResumeTop extends Entity<Long> {
 
 
     @Builder
-    public ResumeTop(Long id, String topTitle, String topFirstSubtitle, String topSecondSubtitle, String topThirdSubtitle, String topFourSubtitle, String topFiveSubtitle, String topSixSubtitle, String topSevenSubtitle, Long createUser, Long updateUser, Date createTime, Date updateTime) {
+    public ResumeTop(Long id, Long createUser, LocalDateTime createTime, Long updateUser, LocalDateTime updateTime, String topTitle, String topFirstSubtitle, String topSecondSubtitle, String topThirdSubtitle, String topFourSubtitle, String topFiveSubtitle, String topSixSubtitle, String topSevenSubtitle) {
         this.id = id;
+        this.createUser = createUser;
+        this.createTime = createTime;
+        this.updateUser = updateUser;
+        this.updateTime = updateTime;
         this.topTitle = topTitle;
         this.topFirstSubtitle = topFirstSubtitle;
         this.topSecondSubtitle = topSecondSubtitle;

@@ -1,41 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.resumeims.server.dao.ResumeExperienceMapper">
-  <resultMap id="BaseResultMap" type="com.resumeims.server.entity.ResumeExperience">
-    <id column="id" jdbcType="BIGINT" property="id" />
-    <result column="title" jdbcType="VARCHAR" property="title" />
-    <result column="title_sub" jdbcType="VARCHAR" property="titleSub" />
-    <result column="title_sub_lite" jdbcType="VARCHAR" property="titleSubLite" />
-    <result column="exp_time_start" jdbcType="TIMESTAMP" property="expTimeStart" />
-    <result column="exp_time_end" jdbcType="TIMESTAMP" property="expTimeEnd" />
-    <result column="create_user" jdbcType="BIGINT" property="createUser" />
-    <result column="update_user" jdbcType="BIGINT" property="updateUser" />
-    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
-    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
-  </resultMap>
-  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.resumeims.server.entity.ResumeExperience">
-    <result column="content" jdbcType="LONGVARCHAR" property="content" />
-  </resultMap>
-  <sql id="Base_Column_List">
-    id, title, title_sub, title_sub_lite, exp_time_start, exp_time_end, create_user, 
+    <resultMap id="BaseResultMap" type="com.resumeims.server.entity.ResumeExperience">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="title" jdbcType="VARCHAR" property="title"/>
+        <result column="title_sub" jdbcType="VARCHAR" property="titleSub"/>
+        <result column="title_sub_lite" jdbcType="VARCHAR" property="titleSubLite"/>
+        <result column="content" jdbcType="VARCHAR" property="content"/>
+        <result column="exp_time_start" jdbcType="TIMESTAMP" property="expTimeStart"/>
+        <result column="exp_time_end" jdbcType="TIMESTAMP" property="expTimeEnd"/>
+        <result column="create_user" jdbcType="BIGINT" property="createUser"/>
+        <result column="update_user" jdbcType="BIGINT" property="updateUser"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, title, title_sub, title_sub_lite, content, exp_time_start, exp_time_end, create_user,
     update_user, create_time, update_time
   </sql>
-  <sql id="Blob_Column_List">
-    content
-  </sql>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="ResultMapWithBLOBs">
-    select 
-    <include refid="Base_Column_List" />
-    ,
-    <include refid="Blob_Column_List" />
-    from t_resume_experience
-    where id = #{id,jdbcType=BIGINT}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from t_resume_experience
+        where id = #{id,jdbcType=BIGINT}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
     delete from t_resume_experience
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="com.resumeims.server.entity.ResumeExperience">
+    <insert id="insert" parameterType="com.resumeims.server.entity.ResumeExperience">
     insert into t_resume_experience (id, title, title_sub, 
       title_sub_lite, exp_time_start, exp_time_end, 
       create_user, update_user, create_time, 
@@ -45,116 +38,116 @@
       #{createUser,jdbcType=BIGINT}, #{updateUser,jdbcType=BIGINT}, #{createTime,jdbcType=TIMESTAMP}, 
       #{updateTime,jdbcType=TIMESTAMP}, #{content,jdbcType=LONGVARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.resumeims.server.entity.ResumeExperience">
-    insert into t_resume_experience
-    <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        id,
-      </if>
-      <if test="title != null">
-        title,
-      </if>
-      <if test="titleSub != null">
-        title_sub,
-      </if>
-      <if test="titleSubLite != null">
-        title_sub_lite,
-      </if>
-      <if test="expTimeStart != null">
-        exp_time_start,
-      </if>
-      <if test="expTimeEnd != null">
-        exp_time_end,
-      </if>
-      <if test="createUser != null">
-        create_user,
-      </if>
-      <if test="updateUser != null">
-        update_user,
-      </if>
-      <if test="createTime != null">
-        create_time,
-      </if>
-      <if test="updateTime != null">
-        update_time,
-      </if>
-      <if test="content != null">
-        content,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        #{id,jdbcType=BIGINT},
-      </if>
-      <if test="title != null">
-        #{title,jdbcType=VARCHAR},
-      </if>
-      <if test="titleSub != null">
-        #{titleSub,jdbcType=VARCHAR},
-      </if>
-      <if test="titleSubLite != null">
-        #{titleSubLite,jdbcType=VARCHAR},
-      </if>
-      <if test="expTimeStart != null">
-        #{expTimeStart,jdbcType=TIMESTAMP},
-      </if>
-      <if test="expTimeEnd != null">
-        #{expTimeEnd,jdbcType=TIMESTAMP},
-      </if>
-      <if test="createUser != null">
-        #{createUser,jdbcType=BIGINT},
-      </if>
-      <if test="updateUser != null">
-        #{updateUser,jdbcType=BIGINT},
-      </if>
-      <if test="createTime != null">
-        #{createTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="updateTime != null">
-        #{updateTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="content != null">
-        #{content,jdbcType=LONGVARCHAR},
-      </if>
-    </trim>
-  </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.resumeims.server.entity.ResumeExperience">
-    update t_resume_experience
-    <set>
-      <if test="title != null">
-        title = #{title,jdbcType=VARCHAR},
-      </if>
-      <if test="titleSub != null">
-        title_sub = #{titleSub,jdbcType=VARCHAR},
-      </if>
-      <if test="titleSubLite != null">
-        title_sub_lite = #{titleSubLite,jdbcType=VARCHAR},
-      </if>
-      <if test="expTimeStart != null">
-        exp_time_start = #{expTimeStart,jdbcType=TIMESTAMP},
-      </if>
-      <if test="expTimeEnd != null">
-        exp_time_end = #{expTimeEnd,jdbcType=TIMESTAMP},
-      </if>
-      <if test="createUser != null">
-        create_user = #{createUser,jdbcType=BIGINT},
-      </if>
-      <if test="updateUser != null">
-        update_user = #{updateUser,jdbcType=BIGINT},
-      </if>
-      <if test="createTime != null">
-        create_time = #{createTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="updateTime != null">
-        update_time = #{updateTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="content != null">
-        content = #{content,jdbcType=LONGVARCHAR},
-      </if>
-    </set>
-    where id = #{id,jdbcType=BIGINT}
-  </update>
-  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.resumeims.server.entity.ResumeExperience">
+    <insert id="insertSelective" parameterType="com.resumeims.server.entity.ResumeExperience">
+        insert into t_resume_experience
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="title != null">
+                title,
+            </if>
+            <if test="titleSub != null">
+                title_sub,
+            </if>
+            <if test="titleSubLite != null">
+                title_sub_lite,
+            </if>
+            <if test="expTimeStart != null">
+                exp_time_start,
+            </if>
+            <if test="expTimeEnd != null">
+                exp_time_end,
+            </if>
+            <if test="createUser != null">
+                create_user,
+            </if>
+            <if test="updateUser != null">
+                update_user,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="updateTime != null">
+                update_time,
+            </if>
+            <if test="content != null">
+                content,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=BIGINT},
+            </if>
+            <if test="title != null">
+                #{title,jdbcType=VARCHAR},
+            </if>
+            <if test="titleSub != null">
+                #{titleSub,jdbcType=VARCHAR},
+            </if>
+            <if test="titleSubLite != null">
+                #{titleSubLite,jdbcType=VARCHAR},
+            </if>
+            <if test="expTimeStart != null">
+                #{expTimeStart,jdbcType=TIMESTAMP},
+            </if>
+            <if test="expTimeEnd != null">
+                #{expTimeEnd,jdbcType=TIMESTAMP},
+            </if>
+            <if test="createUser != null">
+                #{createUser,jdbcType=BIGINT},
+            </if>
+            <if test="updateUser != null">
+                #{updateUser,jdbcType=BIGINT},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="content != null">
+                #{content,jdbcType=LONGVARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.resumeims.server.entity.ResumeExperience">
+        update t_resume_experience
+        <set>
+            <if test="title != null">
+                title = #{title,jdbcType=VARCHAR},
+            </if>
+            <if test="titleSub != null">
+                title_sub = #{titleSub,jdbcType=VARCHAR},
+            </if>
+            <if test="titleSubLite != null">
+                title_sub_lite = #{titleSubLite,jdbcType=VARCHAR},
+            </if>
+            <if test="expTimeStart != null">
+                exp_time_start = #{expTimeStart,jdbcType=TIMESTAMP},
+            </if>
+            <if test="expTimeEnd != null">
+                exp_time_end = #{expTimeEnd,jdbcType=TIMESTAMP},
+            </if>
+            <if test="createUser != null">
+                create_user = #{createUser,jdbcType=BIGINT},
+            </if>
+            <if test="updateUser != null">
+                update_user = #{updateUser,jdbcType=BIGINT},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="content != null">
+                content = #{content,jdbcType=LONGVARCHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+    <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.resumeims.server.entity.ResumeExperience">
     update t_resume_experience
     set title = #{title,jdbcType=VARCHAR},
       title_sub = #{titleSub,jdbcType=VARCHAR},
@@ -168,13 +161,14 @@
       content = #{content,jdbcType=LONGVARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.resumeims.server.entity.ResumeExperience">
+    <update id="updateByPrimaryKey" parameterType="com.resumeims.server.entity.ResumeExperience">
     update t_resume_experience
     set title = #{title,jdbcType=VARCHAR},
       title_sub = #{titleSub,jdbcType=VARCHAR},
       title_sub_lite = #{titleSubLite,jdbcType=VARCHAR},
       exp_time_start = #{expTimeStart,jdbcType=TIMESTAMP},
       exp_time_end = #{expTimeEnd,jdbcType=TIMESTAMP},
+      content = #{content,jdbcType=LONGVARCHAR},
       create_user = #{createUser,jdbcType=BIGINT},
       update_user = #{updateUser,jdbcType=BIGINT},
       create_time = #{createTime,jdbcType=TIMESTAMP},

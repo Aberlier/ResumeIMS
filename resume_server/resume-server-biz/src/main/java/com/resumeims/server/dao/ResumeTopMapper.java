@@ -1,7 +1,6 @@
 package com.resumeims.server.dao;
 
 import com.resumeims.resume_config.basemapper.SuperMapper;
-import com.resumeims.server.entity.EmergencyMaterialInput;
 import com.resumeims.server.entity.ResumeTop;
 import org.springframework.stereotype.Repository;
 

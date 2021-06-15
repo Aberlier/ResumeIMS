@@ -8,12 +8,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="resume_config" />
-        <module name="resume-server-service" />
+        <module name="resumeims" />
         <module name="resume_eureka" />
         <module name="resume-server-controller" />
         <module name="resume-server-biz" />
         <module name="resume-server-entity" />
-        <module name="resumeims" />
+        <module name="resume-server-service" />
         <module name="resume-server-run" />
       </profile>
     </annotationProcessing>

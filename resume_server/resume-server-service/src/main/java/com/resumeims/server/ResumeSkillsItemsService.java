@@ -2,7 +2,6 @@ package com.resumeims.server;
 
 import com.resumeims.resume_config.baseservices.SuperService;
 import com.resumeims.server.entity.ResumeSkillsItems;
-import com.resumeims.server.entity.ResumeTop;
 
 /**
  * <p>

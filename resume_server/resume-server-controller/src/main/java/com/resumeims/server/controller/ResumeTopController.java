@@ -1,10 +1,8 @@
 package com.resumeims.server.controller;
 
 import com.resumeims.resume_config.basecontroller.SuperController;
-import com.resumeims.server.ResumeIndexService;
 import com.resumeims.server.ResumeTopService;
 import com.resumeims.server.dto.*;
-import com.resumeims.server.entity.ResumeIndex;
 import com.resumeims.server.entity.ResumeTop;
 import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;

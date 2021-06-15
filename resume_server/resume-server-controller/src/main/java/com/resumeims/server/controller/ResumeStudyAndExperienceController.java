@@ -29,7 +29,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/resumeStudyAndExperienceController")
 @Api(value = "ResumeStudyAndExperienceController", tags = "简历主页信息控制层")
-public class ResumeStudyAndExperienceController extends SuperController<ResumeStudyAndExperienceService, Long,ResumeStudyAndExperience, ResumeStudyAndExperiencePageDTO, ResumeStudyAndExperienceSaveDTO, ResumeStudyAndExperienceUpdateDTO> {
+public class ResumeStudyAndExperienceController extends SuperController<ResumeStudyAndExperienceService, Long, ResumeStudyAndExperience, ResumeStudyAndExperiencePageDTO, ResumeStudyAndExperienceSaveDTO, ResumeStudyAndExperienceUpdateDTO> {
     @Autowired
     private ResumeStudyAndExperienceService resumeStudyAndExperienceService;
 

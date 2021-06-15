@@ -1,8 +1,11 @@
 package com.resumeims.server.dao;
 
+import com.resumeims.resume_config.basemapper.SuperMapper;
 import com.resumeims.server.entity.ResumeExperience;
+import org.springframework.stereotype.Repository;
 
-public interface ResumeExperienceMapper {
+@Repository
+public interface ResumeExperienceMapper extends SuperMapper<ResumeExperience> {
     int deleteByPrimaryKey(Long id);
 
     int insert(ResumeExperience record);
@@ -13,7 +16,6 @@ public interface ResumeExperienceMapper {
 
     int updateByPrimaryKeySelective(ResumeExperience record);
 
-    int updateByPrimaryKeyWithBLOBs(ResumeExperience record);
 
     int updateByPrimaryKey(ResumeExperience record);
 }

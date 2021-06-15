@@ -1,11 +1,8 @@
 package com.resumeims.server.impl;
 
 import com.resumeims.server.ResumeStudyService;
-import com.resumeims.server.ResumeTopService;
 import com.resumeims.server.dao.ResumeStudyMapper;
-import com.resumeims.server.dao.ResumeTopMapper;
 import com.resumeims.server.entity.ResumeStudy;
-import com.resumeims.server.entity.ResumeTop;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
