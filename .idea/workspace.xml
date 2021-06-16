@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88f9a2c9-cd6a-46ce-8b32-2ba446bff068" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resume_server/resume-server-run/src/main/resources/log4j.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/log/LoggerStartupListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/resume_config/src/main/java/com/resumeims/resume_config/log/LoggerStartupListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/DataBaseConfig/DruidConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/resume_config/target/classes/com/resumeims/resume_config/DataBaseConfig/DruidConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resume_config/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/resume_config/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resume_config/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/resume_config/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
@@ -28,6 +25,12 @@
       <change beforePath="$PROJECT_DIR$/resume_server/resume-server-controller/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resume_server/resume-server-controller/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resume_server/resume-server-controller/target/resume-server-controller-0.0.1-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resume_server/resume-server-entity/src/main/java/com/resumeims/server/entity/ResumeInfoDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/resume_server/resume-server-entity/src/main/java/com/resumeims/server/entity/ResumeInfoDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resume_server/resume-server-entity/src/main/java/com/resumeims/server/entity/ResumeMsg.java" beforeDir="false" afterPath="$PROJECT_DIR$/resume_server/resume-server-entity/src/main/java/com/resumeims/server/entity/ResumeMsg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resume_server/resume-server-entity/src/main/java/com/resumeims/server/entity/ResumeSkills.java" beforeDir="false" afterPath="$PROJECT_DIR$/resume_server/resume-server-entity/src/main/java/com/resumeims/server/entity/ResumeSkills.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resume_server/resume-server-entity/src/main/java/com/resumeims/server/entity/ResumeSkillsItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/resume_server/resume-server-entity/src/main/java/com/resumeims/server/entity/ResumeSkillsItems.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resume_server/resume-server-entity/src/main/java/com/resumeims/server/entity/ResumeStudy.java" beforeDir="false" afterPath="$PROJECT_DIR$/resume_server/resume-server-entity/src/main/java/com/resumeims/server/entity/ResumeStudy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resume_server/resume-server-entity/src/main/java/com/resumeims/server/entity/ResumeStudyAndExperience.java" beforeDir="false" afterPath="$PROJECT_DIR$/resume_server/resume-server-entity/src/main/java/com/resumeims/server/entity/ResumeStudyAndExperience.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resume_server/resume-server-entity/target/classes/com/resumeims/server/App.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resume_server/resume-server-entity/target/classes/com/resumeims/server/entity/EmergencyMaterialInput.class" beforeDir="false" afterPath="$PROJECT_DIR$/resume_server/resume-server-entity/target/classes/com/resumeims/server/entity/EmergencyMaterialInput.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resume_server/resume-server-entity/target/classes/com/resumeims/server/entity/EmergencyMaterialInputEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/resume_server/resume-server-entity/target/classes/com/resumeims/server/entity/EmergencyMaterialInputEntity.class" afterDir="false" />
@@ -36,8 +39,6 @@
       <change beforePath="$PROJECT_DIR$/resume_server/resume-server-entity/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resume_server/resume-server-entity/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resume_server/resume-server-entity/target/resume-server-entity-0.0.1-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resume_server/resume-server-run/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/resume_server/resume-server-run/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resume_server/resume-server-run/src/main/resources/logback-dev.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resume_server/resume-server-run/target/classes/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/resume_server/resume-server-run/target/classes/bootstrap.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resume_server/resume-server-run/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/resume_server/resume-server-run/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resume_server/resume-server-run/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
@@ -53,7 +54,6 @@
       <change beforePath="$PROJECT_DIR$/resume_server/resume-server-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resume_server/resume-server-service/target/resume-server-service-0.0.1-SNAPSHOT.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resume_server/resume-server-service/target/test-classes/com/resumeims/server/AppTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/filters/config-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/filters/config-dev.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -247,7 +247,7 @@
       <workItem from="1623661783349" duration="9439000" />
       <workItem from="1623719632210" duration="344000" />
       <workItem from="1623722268073" duration="1439000" />
-      <workItem from="1623809583599" duration="10330000" />
+      <workItem from="1623809583599" duration="14220000" />
     </task>
     <task id="LOCAL-00001" summary="增加全局配置resume-config模块">
       <created>1622943683119</created>
@@ -319,7 +319,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623719968066</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="完善日志配置&#10;打印后台mapper层sql语句">
+      <created>1623822932826</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1623822932826</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,7 +365,8 @@
     <MESSAGE value="修改Dao扫描类" />
     <MESSAGE value="添加dao\mapper\dto\entity\service\controller" />
     <MESSAGE value="完善各层逻辑 增加对应的日志输出配置" />
-    <option name="LAST_COMMIT_MESSAGE" value="完善各层逻辑 增加对应的日志输出配置" />
+    <MESSAGE value="完善日志配置&#10;打印后台mapper层sql语句" />
+    <option name="LAST_COMMIT_MESSAGE" value="完善日志配置&#10;打印后台mapper层sql语句" />
   </component>
   <component name="WindowStateProjectService">
     <state x="392" y="91" key="#Inspections" timestamp="1622983351386">
@@ -377,10 +385,10 @@
       <screen x="62" y="0" width="1474" height="864" />
     </state>
     <state x="254" y="91" width="1164" height="682" key="#com.intellij.execution.impl.EditConfigurationsDialog/62.0.1474.864@62.0.1474.864" timestamp="1622986150595" />
-    <state x="605" y="142" key="#com.intellij.ide.util.MemberChooser" timestamp="1623627586916">
+    <state x="605" y="142" key="#com.intellij.ide.util.MemberChooser" timestamp="1623827020220">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
-    <state x="605" y="142" key="#com.intellij.ide.util.MemberChooser/62.0.1474.864@62.0.1474.864" timestamp="1623627586916" />
+    <state x="605" y="142" key="#com.intellij.ide.util.MemberChooser/62.0.1474.864@62.0.1474.864" timestamp="1623827020220" />
     <state x="562" y="222" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1622984830210">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
@@ -405,10 +413,10 @@
       <screen x="62" y="0" width="1474" height="864" />
     </state>
     <state x="421" y="270" key="#xdebugger.evaluate/62.0.1474.864@62.0.1474.864" timestamp="1623668531273" />
-    <state x="393" y="47" key="CommitChangelistDialog2" timestamp="1623719961347">
+    <state x="393" y="47" key="CommitChangelistDialog2" timestamp="1623822928730">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
-    <state x="393" y="47" key="CommitChangelistDialog2/62.0.1474.864@62.0.1474.864" timestamp="1623719961347" />
+    <state x="393" y="47" key="CommitChangelistDialog2/62.0.1474.864@62.0.1474.864" timestamp="1623822928730" />
     <state width="447" height="466" key="DebuggerActiveHint" timestamp="1623811076831">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
@@ -481,10 +489,10 @@
       <screen x="62" y="0" width="1474" height="864" />
     </state>
     <state x="301" y="75" key="SettingsEditor/62.0.1474.864@62.0.1474.864" timestamp="1623719976447" />
-    <state x="392" y="169" key="Vcs.Push.Dialog.v2" timestamp="1623719988534">
+    <state x="392" y="169" key="Vcs.Push.Dialog.v2" timestamp="1623822942812">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
-    <state x="392" y="169" key="Vcs.Push.Dialog.v2/62.0.1474.864@62.0.1474.864" timestamp="1623719988534" />
+    <state x="392" y="169" key="Vcs.Push.Dialog.v2/62.0.1474.864@62.0.1474.864" timestamp="1623822942812" />
     <state width="744" height="439" key="XDebugger.FullValuePopup" timestamp="1622883787232">
       <screen x="62" y="0" width="1474" height="864" />
     </state>

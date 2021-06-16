@@ -1,89 +1,54 @@
 package com.resumeims.server.entity;
 
+import cn.afterturn.easypoi.excel.annotation.Excel;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableName;
+import com.resumeims.resume_config.baseentity.Entity;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import lombok.*;
+import lombok.experimental.Accessors;
+import org.hibernate.validator.constraints.Length;
+
+import java.time.LocalDateTime;
 import java.util.Date;
 
-public class ResumeStudyAndExperience {
-    private Long id;
+import static com.baomidou.mybatisplus.annotation.SqlCondition.LIKE;
 
+@Data
+@NoArgsConstructor
+@ToString(callSuper = true)
+@EqualsAndHashCode(callSuper = true)
+@Accessors(chain = true)
+@TableName("t_resume_experience")
+@ApiModel(value = "ResumeStudyAndExperience", description = "工作经历")
+@AllArgsConstructor
+public class ResumeStudyAndExperience extends Entity<Long> {
+    /**
+     * 标题名称
+     */
+    @ApiModelProperty(value = "标题名称")
+    @Length(max = 50, message = "标题名称长度不能超过50")
+    @TableField(value = "title", condition = LIKE)
+    @Excel(name = "标题名称")
     private String title;
-
+    /**
+     * 描述
+     */
+    @ApiModelProperty(value = "描述")
+    @Length(max = 50, message = "描述长度不能超过900")
+    @TableField(value = "desc", condition = LIKE)
+    @Excel(name = "描述")
     private String desc;
 
-    private Long createUser;
-
-    private Long updateUser;
-
-    private Date createTime;
-
-    private Date updateTime;
-
-    public ResumeStudyAndExperience(Long id, String title, String desc, Long createUser, Long updateUser, Date createTime, Date updateTime) {
+    @Builder
+    public ResumeStudyAndExperience(Long id, String title, String desc, Long createUser, Long updateUser, LocalDateTime createTime, LocalDateTime updateTime) {
         this.id = id;
         this.title = title;
         this.desc = desc;
         this.createUser = createUser;
         this.updateUser = updateUser;
         this.createTime = createTime;
-        this.updateTime = updateTime;
-    }
-
-    public ResumeStudyAndExperience() {
-        super();
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title == null ? null : title.trim();
-    }
-
-    public String getDesc() {
-        return desc;
-    }
-
-    public void setDesc(String desc) {
-        this.desc = desc == null ? null : desc.trim();
-    }
-
-    public Long getCreateUser() {
-        return createUser;
-    }
-
-    public void setCreateUser(Long createUser) {
-        this.createUser = createUser;
-    }
-
-    public Long getUpdateUser() {
-        return updateUser;
-    }
-
-    public void setUpdateUser(Long updateUser) {
-        this.updateUser = updateUser;
-    }
-
-    public Date getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
-
-    public Date getUpdateTime() {
-        return updateTime;
-    }
-
-    public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
     }
 }

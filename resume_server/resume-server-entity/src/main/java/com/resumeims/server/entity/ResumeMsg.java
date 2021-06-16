@@ -1,29 +1,72 @@
 package com.resumeims.server.entity;
 
+import cn.afterturn.easypoi.excel.annotation.Excel;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableName;
+import com.resumeims.resume_config.baseentity.Entity;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import lombok.*;
+import lombok.experimental.Accessors;
+import org.hibernate.validator.constraints.Length;
+
+import java.time.LocalDateTime;
 import java.util.Date;
 
-public class ResumeMsg {
-    private Long id;
+import static com.baomidou.mybatisplus.annotation.SqlCondition.LIKE;
 
+@Data
+@NoArgsConstructor
+@ToString(callSuper = true)
+@EqualsAndHashCode(callSuper = true)
+@Accessors(chain = true)
+@TableName("t_resume_msg")
+@ApiModel(value = "ResumeMsg", description = "留言表")
+@AllArgsConstructor
+public class ResumeMsg extends Entity<Long> {
+    /**
+     * 姓名/企业
+     */
+    @ApiModelProperty(value = "姓名/企业")
+    @Length(max = 50, message = "姓名/企业长度不能超过50")
+    @TableField(value = "name", condition = LIKE)
+    @Excel(name = "姓名/企业")
     private String name;
-
+    /**
+     * 邮箱
+     */
+    @ApiModelProperty(value = "邮箱")
+    @Length(max = 50, message = "邮箱长度不能超过50")
+    @TableField(value = "email", condition = LIKE)
+    @Excel(name = "邮箱")
     private String email;
-
+    /**
+     * IP地址
+     */
+    @ApiModelProperty(value = "IP地址")
+    @Length(max = 50, message = "IP地址长度不能超过50")
+    @TableField(value = "ip", condition = LIKE)
+    @Excel(name = "IP地址")
     private String ip;
-
+    /**
+     * MAC地址
+     */
+    @ApiModelProperty(value = "MAC地址")
+    @Length(max = 50, message = "MAC地址长度不能超过50")
+    @TableField(value = "mac_address", condition = LIKE)
+    @Excel(name = "MAC地址")
     private String macAddress;
-
+    /**
+     * 内容
+     */
+    @ApiModelProperty(value = "内容")
+    @Length(max = 50, message = "内容长度不能超过50")
+    @TableField(value = "content", condition = LIKE)
+    @Excel(name = "内容")
     private String content;
 
-    private Long createUser;
-
-    private Long updateUser;
-
-    private Date createTime;
-
-    private Date updateTime;
-
-    public ResumeMsg(Long id, String name, String email, String ip, String macAddress, String content, Long createUser, Long updateUser, Date createTime, Date updateTime) {
+    @Builder
+    public ResumeMsg(Long id, String name, String email, String ip, String macAddress, String content, Long createUser, Long updateUser, LocalDateTime createTime, LocalDateTime updateTime) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -33,90 +76,6 @@ public class ResumeMsg {
         this.createUser = createUser;
         this.updateUser = updateUser;
         this.createTime = createTime;
-        this.updateTime = updateTime;
-    }
-
-    public ResumeMsg() {
-        super();
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email == null ? null : email.trim();
-    }
-
-    public String getIp() {
-        return ip;
-    }
-
-    public void setIp(String ip) {
-        this.ip = ip == null ? null : ip.trim();
-    }
-
-    public String getMacAddress() {
-        return macAddress;
-    }
-
-    public void setMacAddress(String macAddress) {
-        this.macAddress = macAddress == null ? null : macAddress.trim();
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content == null ? null : content.trim();
-    }
-
-    public Long getCreateUser() {
-        return createUser;
-    }
-
-    public void setCreateUser(Long createUser) {
-        this.createUser = createUser;
-    }
-
-    public Long getUpdateUser() {
-        return updateUser;
-    }
-
-    public void setUpdateUser(Long updateUser) {
-        this.updateUser = updateUser;
-    }
-
-    public Date getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
-
-    public Date getUpdateTime() {
-        return updateTime;
-    }
-
-    public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
     }
 }

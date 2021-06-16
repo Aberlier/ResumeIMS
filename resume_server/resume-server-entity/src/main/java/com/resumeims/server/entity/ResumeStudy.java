@@ -1,31 +1,79 @@
 package com.resumeims.server.entity;
 
+import cn.afterturn.easypoi.excel.annotation.Excel;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableName;
+import com.resumeims.resume_config.baseentity.Entity;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import lombok.*;
+import lombok.experimental.Accessors;
+import org.hibernate.validator.constraints.Length;
+
+import java.time.LocalDateTime;
 import java.util.Date;
 
-public class ResumeStudy {
-    private Long id;
+import static com.baomidou.mybatisplus.annotation.SqlCondition.LIKE;
 
+@Data
+@NoArgsConstructor
+@ToString(callSuper = true)
+@EqualsAndHashCode(callSuper = true)
+@Accessors(chain = true)
+@TableName("t_resume_study")
+@ApiModel(value = "ResumeStudy", description = "求学经历表")
+@AllArgsConstructor
+public class ResumeStudy extends Entity<Long> {
+    /**
+     * 标题名称
+     */
+    @ApiModelProperty(value = "标题名称")
+    @Length(max = 50, message = "标题名称长度不能超过50")
+    @TableField(value = "title", condition = LIKE)
+    @Excel(name = "标题名称")
     private String title;
-
+    /**
+     * 子标题名称
+     */
+    @ApiModelProperty(value = "子标题名称")
+    @Length(max = 50, message = "子标题名称长度不能超过50")
+    @TableField(value = "title_sub", condition = LIKE)
+    @Excel(name = "子标题名称")
     private String titleSub;
-
+    /**
+     * 子标题副标题
+     */
+    @ApiModelProperty(value = "子标题副标题名称")
+    @Length(max = 50, message = "子标题副标题名称长度不能超过50")
+    @TableField(value = "title_sub_lite", condition = LIKE)
+    @Excel(name = "子标题副标题名称")
     private String titleSubLite;
-
+    /**
+     * 时间开始节点
+     */
+    @ApiModelProperty(value = "时间开始节点")
+    @Length(max = 50, message = "时间开始节点长度不能超过50")
+    @TableField(value = "study_time_start", condition = LIKE)
+    @Excel(name = "时间开始节点")
     private Date studyTimeStart;
-
+    /**
+     * 时间开始节点
+     */
+    @ApiModelProperty(value = "时间结束节点")
+    @Length(max = 50, message = "时间结束节点长度不能超过50")
+    @TableField(value = "study_time_end", condition = LIKE)
+    @Excel(name = "时间结束节点")
     private Date studyTimeEnd;
-
-    private Long createUser;
-
-    private Long updateUser;
-
-    private Date createTime;
-
-    private Date updateTime;
-
+    /**
+     * 时间开始节点
+     */
+    @ApiModelProperty(value = "时间结束节点")
+    @Length(max = 50, message = "时间结束节点长度不能超过50")
+    @TableField(value = "study_time_end", condition = LIKE)
+    @Excel(name = "时间结束节点")
     private String content;
 
-    public ResumeStudy(Long id, String title, String titleSub, String titleSubLite, Date studyTimeStart, Date studyTimeEnd, Long createUser, Long updateUser, Date createTime, Date updateTime, String content) {
+    public ResumeStudy(Long id, String title, String titleSub, String titleSubLite, Date studyTimeStart, Date studyTimeEnd, Long createUser, Long updateUser, LocalDateTime createTime, LocalDateTime updateTime, String content) {
         this.id = id;
         this.title = title;
         this.titleSub = titleSub;
@@ -37,97 +85,5 @@ public class ResumeStudy {
         this.createTime = createTime;
         this.updateTime = updateTime;
         this.content = content;
-    }
-
-    public ResumeStudy() {
-        super();
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title == null ? null : title.trim();
-    }
-
-    public String getTitleSub() {
-        return titleSub;
-    }
-
-    public void setTitleSub(String titleSub) {
-        this.titleSub = titleSub == null ? null : titleSub.trim();
-    }
-
-    public String getTitleSubLite() {
-        return titleSubLite;
-    }
-
-    public void setTitleSubLite(String titleSubLite) {
-        this.titleSubLite = titleSubLite == null ? null : titleSubLite.trim();
-    }
-
-    public Date getStudyTimeStart() {
-        return studyTimeStart;
-    }
-
-    public void setStudyTimeStart(Date studyTimeStart) {
-        this.studyTimeStart = studyTimeStart;
-    }
-
-    public Date getStudyTimeEnd() {
-        return studyTimeEnd;
-    }
-
-    public void setStudyTimeEnd(Date studyTimeEnd) {
-        this.studyTimeEnd = studyTimeEnd;
-    }
-
-    public Long getCreateUser() {
-        return createUser;
-    }
-
-    public void setCreateUser(Long createUser) {
-        this.createUser = createUser;
-    }
-
-    public Long getUpdateUser() {
-        return updateUser;
-    }
-
-    public void setUpdateUser(Long updateUser) {
-        this.updateUser = updateUser;
-    }
-
-    public Date getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
-
-    public Date getUpdateTime() {
-        return updateTime;
-    }
-
-    public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content == null ? null : content.trim();
     }
 }
