@@ -66,5 +66,16 @@ management:
   endpoint:
     health:
       show-details: ALWAYS
-logging:
-  config: classpath:logback-dev.xml
+#整体日志配置和控制台打印sql语句
+loggi:
+  config: classpath:logback-spring.xml
+  level:
+    com.resumeims.server.dao: DEBUG
+    com.resumeims.server.controller: WARN
+
+#    必须要开启mybatis-plus的开启日志功能
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
