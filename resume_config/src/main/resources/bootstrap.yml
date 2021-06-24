@@ -46,8 +46,8 @@ spring:
     #        - 127.0.0.1:6380
     #        - 127.0.0.1:6381
     #        - 127.0.0.1:6382
-    jedis:
-      #lettuce:
+#    jedis:
+    lettuce:
       pool:
         # 连接池中的最大空闲连接 默认8
         max-idle: 8
@@ -59,6 +59,14 @@ spring:
         max-wait: -1
         #连接超时时间（毫秒）
     timeout: 30000
+# 文件系统
+minio:
+  endpoint: http://106.12.50.23:9000
+  port: 9000
+  access-key: minioadmin
+  secret-key: minioadmin
+  bucket-name: resume-files
+  secure: true
 
 
 # redis 通用配置， 不同的环境，需要配置不同的链接信息，只需要将这段信息复制到具体环境的配置文件中进行修改即可

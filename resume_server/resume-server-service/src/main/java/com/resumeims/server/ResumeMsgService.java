@@ -1,7 +1,11 @@
 package com.resumeims.server;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.resumeims.resume_config.baseservices.SuperService;
 import com.resumeims.server.entity.ResumeMsg;
+
+import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -14,4 +18,7 @@ import com.resumeims.server.entity.ResumeMsg;
  */
 public interface ResumeMsgService extends SuperService<ResumeMsg> {
 
+    Page msgPage(Map<String, Object> params);
+
+    List<Map> msgList(Map<String, Object> params);
 }

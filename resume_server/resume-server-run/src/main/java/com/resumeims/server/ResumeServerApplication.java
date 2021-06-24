@@ -13,11 +13,12 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 
 
-@SpringBootApplication
 @Slf4j
 @EnableEurekaClient
 @EnableSwagger2
 @MapperScan(basePackages = "com.resumeims.server.dao")
+//@SpringBootApplication(scanBasePackages = {"com.resumeims.server", "com.resumeims.resume_config"})
+@SpringBootApplication(scanBasePackages = {"com.resumeims"})
 public class ResumeServerApplication {
 
     public static void main(String[] args) throws UnknownHostException {
