@@ -19,8 +19,9 @@ spring:
     druid:
       driver-class-name: com.mysql.cj.jdbc.Driver
       url: jdbc:mysql://localhost:3306/db_resumeims?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC&zeroDateTimeBehavior=convertToNull&autoReconnect=true
+      #url: jdbc:mysql://106.12.50.23:3306/db_resumeims?useUnicode=true&characterEncoding=utf8&autoReconnect=true
       username: root
-      password: root
+      password: Resume0803$#
       filters: stst,wall,log4j,config
       max-active: 100
       initial-size: 1
@@ -34,3 +35,80 @@ spring:
       pool-prepared-statements: true
       max-open-prepared-statements: 50
       max-pool-perpared-statement-per-connection-size: 20
+  redis:
+    database: 0
+    host: 106.12.50.23
+    port: 6379
+    password:
+    #    cluster:
+    #      nodes:
+    #        - 127.0.0.1:6379
+    #        - 127.0.0.1:6380
+    #        - 127.0.0.1:6381
+    #        - 127.0.0.1:6382
+    jedis:
+      #lettuce:
+      pool:
+        # 连接池中的最大空闲连接 默认8
+        max-idle: 8
+        # 连接池中的最小空闲连接 默认0
+        min-idle: 0
+        # 连接池最大连接数 默认8 ，负数表示没有限制
+        max-active: 8
+        # 连接池最大阻塞等待时间（使用负值表示没有限制） 默认-1
+        max-wait: -1
+        #连接超时时间（毫秒）
+    timeout: 30000
+
+
+# redis 通用配置， 不同的环境，需要配置不同的链接信息，只需要将这段信息复制到具体环境的配置文件中进行修改即可
+# 如：复制到zuihou-authority-server-dev.yml中将数据库名和ip改掉
+#zuihou:
+#  redis:
+#    ip: 192.168.1.201
+#    port: 16379
+#    password: SbtyMveYNfLzTks7H0apCmyStPzWJqjy
+#    database: 0
+#
+#spring:
+#  cache:
+#    type: GENERIC
+#  redis:
+#    host: ${zuihou.redis.ip}
+#    password: ${zuihou.redis.password}
+#    port: ${zuihou.redis.port}
+#    database: ${zuihou.redis.database}
+#j2cache:
+#  #  config-location: /j2cache.properties
+#  open-spring-cache: true
+#  cache-clean-mode: passive
+#  allow-null-values: true
+#  redis-client: lettuce
+#  l2-cache-open: true
+#  # l2-cache-open: false     # 关闭二级缓存
+#  broadcast: net.oschina.j2cache.cache.support.redis.SpringRedisPubSubPolicy
+#  #  broadcast: jgroups       # 关闭二级缓存
+#  L1:
+#    provider_class: caffeine
+#  L2:
+#    provider_class: net.oschina.j2cache.cache.support.redis.SpringRedisProvider
+#    config_section: lettuce
+#  sync_ttl_to_redis: true
+#  default_cache_null_object: false
+#  serialization: fst
+#caffeine:
+#  properties: /j2cache/caffeine.properties   # 这个配置文件需要放在项目中
+#lettuce:
+#  mode: single
+#  namespace: ''
+#  storage: generic
+#  channel: j2cache
+#  scheme: redis
+#  hosts: ${zuihou.redis.ip}:${zuihou.redis.port}
+#  password: ${zuihou.redis.password}
+#  database: ${zuihou.redis.database}
+#  sentinelMasterId: ''
+#  maxTotal: 100
+#  maxIdle: 10
+#  minIdle: 10
+#  timeout: 10000

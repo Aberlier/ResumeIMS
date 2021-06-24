@@ -1,6 +1,6 @@
 # ResumeIMS
 个人简历管理信息系统
-
+mvn clean install -Dmaven.javadoc.skip=true -Dgpg.skip=true -Dmaven.source.skip=true -DskipTests=true
 ## 功能点介绍:
 1. **服务注册&发现与调用：**
 

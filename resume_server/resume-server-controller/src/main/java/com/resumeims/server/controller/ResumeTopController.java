@@ -25,7 +25,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 @Validated
 @RestController
-@RequestMapping("/resumeTopController")
+@RequestMapping("op/resumeTop")
 @Api(value = "ResumeTopController", tags = "简历顶部信息控制层")
 public class ResumeTopController extends SuperController<ResumeTopService, Long, ResumeTop, ResumeTopPageDTO, ResumeTopSaveDTO, ResumeTopUpdateDTO> {
     @Autowired
