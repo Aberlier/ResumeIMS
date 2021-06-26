@@ -7,6 +7,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
@@ -17,8 +19,9 @@ import java.net.UnknownHostException;
 
 @Configuration
 @Slf4j
+@EnableFeignClients  //表示我可以调用其他服务，如果一个服务想要调用其他服务，则必须加上此注解
 @SpringBootApplication
-@EnableEurekaClient
+@EnableEurekaClient //表示我是一个服务
 //@ConfigurationProperties(prefix = "application-dev")
 public class ResumeConfigApplication {
     public static void main(String[] args) throws UnknownHostException {

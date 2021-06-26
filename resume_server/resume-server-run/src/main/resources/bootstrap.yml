@@ -25,9 +25,9 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
       driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://localhost:3306/db_resumeims?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC&zeroDateTimeBehavior=convertToNull&autoReconnect=true
+      url: jdbc:mysql://106.12.50.23:3306/db_resumeims?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC&zeroDateTimeBehavior=convertToNull&autoReconnect=true
       username: root
-      password: root
+      password: Resume0803$#
       filters: stst,wall,log4j,config
       max-active: 100
       initial-size: 1
@@ -65,13 +65,14 @@ spring:
         max-wait: -1
         #连接超时时间（毫秒）
     timeout: 30000
-  minio:
-    endpoint: http://106.12.50.23:9000
-    port: 9000
-    access-key: minioadmin
-    secret-key: minioadmin
-    bucket-name: resume-files
-    secure: true
+# 文件系统
+minio:
+  endpoint: http://106.12.50.23:9000
+  port: 9000
+  access-key: minioadmin
+  secret-key: minioadmin0803
+  bucket-name: resume-files
+  secure: true
   #  cloud:
   #    consul:
   #      host: localhost

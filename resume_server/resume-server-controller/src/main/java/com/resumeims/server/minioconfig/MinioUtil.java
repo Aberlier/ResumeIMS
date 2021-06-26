@@ -1,4 +1,4 @@
-package com.resumeims.resume_config.minioconfig;
+package com.resumeims.server.minioconfig;
 
 import io.minio.MinioClient;
 import io.minio.ObjectStat;
@@ -11,12 +11,10 @@ import io.minio.messages.DeleteError;
 import io.minio.messages.Item;
 import lombok.SneakyThrows;
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
-import javax.annotation.Resources;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
 import java.io.InputStream;

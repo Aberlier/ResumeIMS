@@ -1,10 +1,16 @@
 package com.resumeims.server.controller;
 
 import cn.hutool.core.lang.UUID;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
+
 import com.resumeims.resume_config.minioconfig.MinioConfig;
 import com.resumeims.resume_config.utils.R;
 import com.resumeims.server.MinioFilesService;
+import com.resumeims.server.feign.FeignByRequestMinioClassService;
+
+import com.resumeims.server.minioconfig.MinioUtil;
 import io.minio.Result;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -41,7 +47,9 @@ public class MinioFilesController {
     @Autowired
     private MinioFilesService minioService;
     @Autowired
-    private MinioConfig minioConfig;
+    private FeignByRequestMinioClassService feignByRequestMinioClassService;
+    @Autowired
+    MinioUtil minioUtil;
 
     @ApiOperation(value = "使用minio文件上传")
     @PostMapping("/uploadFile")
@@ -51,18 +59,19 @@ public class MinioFilesController {
     })
     public R uploadFile(MultipartFile file, String bucketName) {
         try {
+            JSONObject minioConfig1 = JSONObject.parseObject(feignByRequestMinioClassService.getMinioConfig());
+            MinioConfig minioConfig = JSON.toJavaObject(minioConfig1, MinioConfig.class);
             bucketName = StringUtils.isNotBlank(bucketName) ? bucketName : minioConfig.getBucketName();
-            if (!minioService.bucketExists(bucketName)) {
-                minioService.makeBucket(bucketName);
+            if (!feignByRequestMinioClassService.bucketExists(bucketName)) {
+                feignByRequestMinioClassService.makeBucket(bucketName);
             }
             String fileName = file.getOriginalFilename();
             String objectName = new SimpleDateFormat("yyyy/MM/dd/").format(new Date()) + UUID.randomUUID().toString().replaceAll("-", "")
                     + fileName.substring(fileName.lastIndexOf("."));
-
             InputStream inputStream = file.getInputStream();
-            minioService.putObject(bucketName, objectName, inputStream);
-            inputStream.close();
-            return R.success(minioService.getObjectUrl(bucketName, objectName));
+            minioUtil.putObject(bucketName, objectName, inputStream);
+//            minioService.upLoadFile(file);
+            return R.success(feignByRequestMinioClassService.getObjectUrl(bucketName, objectName));
         } catch (Exception e) {
             e.printStackTrace();
             return R.fail("上传失败");

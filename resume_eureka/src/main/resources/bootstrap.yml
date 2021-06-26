@@ -6,9 +6,9 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
       driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://localhost:3306/db_resumeims?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC&zeroDateTimeBehavior=convertToNull&autoReconnect=true
+      url: jdbc:mysql://106.12.50.23:3306/db_resumeims?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC&zeroDateTimeBehavior=convertToNull&autoReconnect=true
       username: root
-      password: root
+      password: Resume0803$#
       filters: stst,wall,log4j,config
       max-active: 100
       initial-size: 1
@@ -33,8 +33,8 @@ spring:
     #        - 127.0.0.1:6380
     #        - 127.0.0.1:6381
     #        - 127.0.0.1:6382
-    jedis:
-      #lettuce:
+    #jedis:
+    lettuce:
       pool:
         # 连接池中的最大空闲连接 默认8
         max-idle: 8

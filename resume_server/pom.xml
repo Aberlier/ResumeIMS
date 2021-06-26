@@ -24,7 +24,6 @@
         <!--        <relativePath>../hello-spring-cloud-dependencies/pom.xml</relativePath>-->
     </parent>
     <dependencies>
-
         <dependency>
             <groupId>com.resumeims</groupId>
             <artifactId>resume_config</artifactId>

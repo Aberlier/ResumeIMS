@@ -5,6 +5,7 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.env.Environment;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
@@ -16,9 +17,11 @@ import java.net.UnknownHostException;
 @Slf4j
 @EnableEurekaClient
 @EnableSwagger2
+@EnableFeignClients(value = { "com.resumeims.server", "com.resumeims.resume_config" })
 @MapperScan(basePackages = "com.resumeims.server.dao")
 //@SpringBootApplication(scanBasePackages = {"com.resumeims.server", "com.resumeims.resume_config"})
-@SpringBootApplication(scanBasePackages = {"com.resumeims"})
+//@SpringBootApplication(scanBasePackages = {"com.resumeims"})
+@SpringBootApplication
 public class ResumeServerApplication {
 
     public static void main(String[] args) throws UnknownHostException {

@@ -6,19 +6,26 @@ server:
   servlet:
     session:
       timeout: 30m
-      context-path: /resume_config
+      context-path: /resume-config
   tomcat:
     uri-encoding: UTF-8
     max-threads: 500
 spring:
+  devtools:
+    restart:
+      enabled: true  #设置开启热部署
+      additional-paths: src/main/java #重启目录
+      exclude: WEB-INF/**
+    freemarker:
+      cache: false    #页面不加载缓存，修改即时生效
   application:
-    name: resume_config
+    name: resume-config
   datasource:
     name: druidDataSource
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
       driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://localhost:3306/db_resumeims?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC&zeroDateTimeBehavior=convertToNull&autoReconnect=true
+      url: jdbc:mysql://106.12.50.23:3306/db_resumeims?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC&zeroDateTimeBehavior=convertToNull&autoReconnect=true
       #url: jdbc:mysql://106.12.50.23:3306/db_resumeims?useUnicode=true&characterEncoding=utf8&autoReconnect=true
       username: root
       password: Resume0803$#
@@ -64,7 +71,7 @@ minio:
   endpoint: http://106.12.50.23:9000
   port: 9000
   access-key: minioadmin
-  secret-key: minioadmin
+  secret-key: minioadmin0803
   bucket-name: resume-files
   secure: true
 
