@@ -74,7 +74,11 @@ minio:
   secret-key: minioadmin0803
   bucket-name: resume-files
   secure: true
-
+  #定义监控资源
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
 
 # redis 通用配置， 不同的环境，需要配置不同的链接信息，只需要将这段信息复制到具体环境的配置文件中进行修改即可
 # 如：复制到zuihou-authority-server-dev.yml中将数据库名和ip改掉

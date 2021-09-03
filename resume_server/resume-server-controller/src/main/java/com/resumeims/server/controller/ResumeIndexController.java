@@ -8,6 +8,7 @@ import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -25,8 +26,9 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 @Validated
 @RestController
-@RequestMapping("/resumeIndexController")
-@Api(value = "ResumeIndexController", tags = "简历主页控制层")
+@CrossOrigin
+@RequestMapping("op/resumeIndexController")
+@Api(value = "ResumeIndexController", tags = "个人信息与主页背景控制层")
 public class ResumeIndexController extends SuperController<ResumeIndexService, Long, ResumeIndex, ResumeIndexPageDTO, ResumeIndexSaveDTO, ResumeIndexUpdateDTO> {
     @Autowired
     private ResumeIndexService resumeIndexService;

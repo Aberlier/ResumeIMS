@@ -10,6 +10,7 @@ import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -27,8 +28,9 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 @Validated
 @RestController
-@RequestMapping("/resumeInfoDetailController")
-@Api(value = "ResumeInfoDetailController", tags = "简历主页信息控制层")
+@CrossOrigin
+@RequestMapping("op/resumeInfoDetailController")
+@Api(value = "ResumeInfoDetailController", tags = "简历主页信息详情控制层")
 public class ResumeInfoDetailController extends SuperController<ResumeInfoDetailService, Long, ResumeInfoDetail, ResumeInfoDetailPageDTO, ResumeInfoDetailsSaveDTO, ResumeInfoDetailUpdateDTO> {
     @Autowired
     private ResumeInfoDetailService resumeInfoDetailService;

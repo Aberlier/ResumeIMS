@@ -35,7 +35,7 @@ import java.util.Map;
 @Slf4j
 @Validated
 @RestController
-@RequestMapping("/resumeMsgController")
+@RequestMapping("op/resumeMsgController")
 @Api(value = "ResumeMsgController", tags = "留言信息控制层")
 public class ResumeMsgController extends SuperController<ResumeMsgService, Long, ResumeMsg, ResumeMsgPageDTO, ResumeMsgSaveDTO, ResumeMsgUpdateDTO> {
     @Autowired
